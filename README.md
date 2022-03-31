@@ -1,4 +1,6 @@
-# Projet_tutoré AS 2022 [![npm version](https://badge.fury.io/js/survey-monkey-streams.svg)](//npmjs.com/package/survey-monkey-streams) <!-- petit test --> 
+# Projet_tutoré AS 2022 [![web app](https://img.shields.io/badge/-Web%20App-informational)](https://img.shields.io/badge/-Web%20App-informational) [![release version](https://img.shields.io/badge/Java-17-success)](https://img.shields.io/badge/Java-17-success) [![prerelease version](https://img.shields.io/badge/Pre--release-v0.0.1-orange)](https://img.shields.io/badge/Pre--release-v0.0.1-orange)
+ <!-- petit test --> 
+
 ***Made by TradFlex la traduction n'a jamais été aussi Flex***
 
 Application web permettant de sous-titrer des films reliés à une base de donnée.
