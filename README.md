@@ -1,6 +1,8 @@
 # Projet_tutoré AS 2022 [![web app](https://img.shields.io/badge/-Web%20App-informational)](https://img.shields.io/badge/-Web%20App-informational) [![release version](https://img.shields.io/badge/Java-17-success)](https://img.shields.io/badge/Java-17-success) [![prerelease version](https://img.shields.io/badge/Pre--release-v0.0.1-orange)](https://img.shields.io/badge/Pre--release-v0.0.1-orange)
  <!-- petit test --> 
 
+![Logo TradFlex](/img/logo/blanc_tradFlex.png "TradFlex")
+
 ***Made by TradFlex la traduction n'a jamais été aussi Flex***
 
 Application web permettant de sous-titrer des films reliés à une base de donnée.
