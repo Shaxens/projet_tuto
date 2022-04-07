@@ -1,4 +1,4 @@
-# Projet_tutoré AS 2022 [![web app](https://img.shields.io/badge/-Web%20App-informational)](https://img.shields.io/badge/-Web%20App-informational) [![release version](https://img.shields.io/badge/Java-17-success)](https://img.shields.io/badge/Java-17-success) [![prerelease version](https://img.shields.io/badge/Pre--release-v0.0.1-orange)](https://img.shields.io/badge/Pre--release-v0.0.1-orange)
+# Projet_tutoré AS 2022 [![web app](https://img.shields.io/badge/-Web%20App-informational)](https://img.shields.io/badge/-Web%20App-informational) [![java version](https://img.shields.io/badge/Java-17-success)](https://img.shields.io/badge/Java-17-success) [![maven version](https://img.shields.io/badge/Maven-3.8.1-success)](https://img.shields.io/badge/Maven-3.8.1-success) [![angular version](https://img.shields.io/badge/Angular-13.3.0-success)](https://img.shields.io/badge/Angular-13.3.0-success) [![prerelease version](https://img.shields.io/badge/Pre--release-v0.0.1-orange)](https://img.shields.io/badge/Pre--release-v0.0.1-orange) 
 
  <!-- petit test --> 
 
