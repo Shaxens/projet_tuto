@@ -2,7 +2,7 @@
 
  <!-- petit test --> 
 
-![Logo TradFlex](/img/logo/mix_tradFlex.png "TradFlex")
+![Logo TradFlex](/img/logo/logo_readme_tradflex.png "TradFlex")
 
 ***Made by TradFlex la traduction n'a jamais été aussi Flex***
 
