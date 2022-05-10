@@ -2,6 +2,7 @@ package fr.tradflex.projet;
 
 import fr.tradflex.projet.utils.TimeCode;
 
+<<<<<<< HEAD
 /**
  * On créé des sous-titre avec une taille maxi et un timeCode
  */
@@ -87,5 +88,14 @@ public class SousTitre {
     public String toString() {
         return "Sous-Titre [" + id + "] : " + texteSousTitre + "   " + timeCode;
     }
+=======
+    // Méthodes
+>>>>>>> c61caa23e81fb1c182babdcf049ff00a2b5cf0b8
 
+    /**
+     *
+     */
+    public void ajoutSousTitre() {
+
+    }
 }
