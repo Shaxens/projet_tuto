@@ -1,5 +1,12 @@
 package fr.tradflex.projet;
 
+/**
+ *
+ * @param id On donne un id au Film
+ * @param nom On lui donne un nom
+ * @param duree On lui attribut une durée
+ * @param taille Il possède une taille en octets
+ */
 public record Film(int id, String nom, int duree, int taille) {
 
     // Méthodes
