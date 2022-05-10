@@ -6,23 +6,6 @@ import java.util.List;
 
 public record Projet(int id, String nom, List<Utilisateur> groupeUtilisateur, Film film) {
 
-    // Getter
-    public int getId() {
-        return id;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public List<Utilisateur> getGroupeUtilisateur() {
-        return groupeUtilisateur;
-    }
-
-    public Film getFilm() {
-        return film;
-    }
-
     // Méthodes
     public boolean ajoutUserProjet(Utilisateur utilisateur) {
         return true;
