@@ -1,7 +1,6 @@
 package fr.tradflex.projet;
 
-import fr.tradflex.projet.Film;
-import fr.tradflex.utilisateur.Utilisateur;
+import fr.tradflex.utilisateur.*;
 
 import java.util.List;
 
