@@ -1,42 +1,23 @@
 package fr.tradflex.utilisateur;
 
-public class Utilisateur {
+/**
+ *
+ * @param id On demande un id
+ * @param pseudo On demande un pseudo pour l'utilisateur
+ */
+public record Utilisateur(int id, String pseudo) {
 
-    // Attributs
-    private int id;
-    private String pseudo;
-
-    // Getter
-    public int getId() {
-        return id;
-    }
-    public String getPseudo() {
-        return pseudo;
-    }
-
-    // Setter
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setPseudo(String pseudo) {
-        this.pseudo = pseudo;
-    }
-
-    // Constructeur
-    public Utilisateur(int id, String pseudo) {
-        this.id = id;
-        this.pseudo = pseudo;
-    }
-
-    // Méthodes
+    /**
+     * @param id On demande un id
+     * @param nom On demande un nom pour créer un projet
+     */
     public void creerProjet(int id, String nom) {
 
     }
 
     @Override
     public String toString() {
-        return ("L'utilisateur " + this.getPseudo() + " possede l'id " + id);
+        return ("L'utilisateur " + this.pseudo + " possede l'id " + this.id);
     }
 
 }
