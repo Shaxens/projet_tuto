@@ -30,9 +30,9 @@ public class TradflexRunner {
         film2.toString();
 
         ListeSousTitreSRT ficherSRT = new ListeSousTitreSRT(1,160);
-        ficherSRT.ajouterSousTitre("Coucou je suis le premier sous titre", new TimeCode(1,10));
-        ficherSRT.ajouterSousTitre("Et hop un sous titre de plus", new TimeCode(11, 25));
-        ficherSRT.ajouterSousTitre("Aller un dernier pour la route", new TimeCode(32, 78));
+        ficherSRT.ajouterSousTitre("Coucou je suis le premier sous titre", new TimeCode("1","10"));
+        ficherSRT.ajouterSousTitre("Et hop un sous titre de plus", new TimeCode("11", "25"));
+        ficherSRT.ajouterSousTitre("Aller un dernier pour la route", new TimeCode("32", "78"));
         System.out.println(ficherSRT);
     }
 }

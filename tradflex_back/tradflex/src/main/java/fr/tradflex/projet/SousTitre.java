@@ -2,7 +2,8 @@ package fr.tradflex.projet;
 
 import fr.tradflex.projet.utils.TimeCode;
 
-<<<<<<< HEAD
+import java.util.Objects;
+
 /**
  * On créé des sous-titre avec une taille maxi et un timeCode
  */
@@ -75,27 +76,35 @@ public class SousTitre {
      * @param timeCode On lui attribue un timeCode avec un début et une fin
      */
     // CONSTRUCTEUR
-    public SousTitre(int id, int nbCaractereMax, String texteSousTitre, TimeCode timeCode) throws Exception {
+    public SousTitre(int id, int nbCaractereMax, String texteSousTitre, TimeCode timeCode)  {
         this.setId(id);
         this.setNbCaractereMax(nbCaractereMax);
-        this.setTexteSousTitre(texteSousTitre);
+        try {
+            this.setTexteSousTitre(texteSousTitre);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         this.setNbCaractere(); // Automatiquement égal aux nombre de caractères de this.texteSoutitre
         this.setTimeCode(timeCode);
     }
-
-    // METHODES
-    @Override
-    public String toString() {
-        return "Sous-Titre [" + id + "] : " + texteSousTitre + "   " + timeCode;
-    }
-=======
-    // Méthodes
->>>>>>> c61caa23e81fb1c182babdcf049ff00a2b5cf0b8
 
     /**
      *
      */
     public void ajoutSousTitre() {
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SousTitre sousTitre = (SousTitre) o;
+        return id == sousTitre.id && nbCaractereMax == sousTitre.nbCaractereMax && nbCaractere == sousTitre.nbCaractere && Objects.equals(texteSousTitre, sousTitre.texteSousTitre) && Objects.equals(timeCode, sousTitre.timeCode);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nbCaractereMax, nbCaractere, texteSousTitre, timeCode);
     }
 }
