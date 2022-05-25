@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tradflex_front_angular": {
+    "tradflex-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tradflex_front_angular",
+            "outputPath": "dist/tradflex-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "tradflex_front_angular:build:production"
+              "browserTarget": "tradflex-app:build:production"
             },
             "development": {
-              "browserTarget": "tradflex_front_angular:build:development"
+              "browserTarget": "tradflex-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tradflex_front_angular:build"
+            "browserTarget": "tradflex-app:build"
           }
         },
         "test": {
@@ -102,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "tradflex_front_angular"
+  "defaultProject": "tradflex-app"
 }
