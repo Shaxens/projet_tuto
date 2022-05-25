@@ -19,7 +19,7 @@ describe('AppComponent', () => {
   it(`should have as title 'tradflex_front_angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('tradflex_front_angular');
+    expect(app.titre).toEqual('tradflex_front_angular');
   });
 
   it('should render title', () => {
