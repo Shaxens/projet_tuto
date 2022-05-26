@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Film } from '../film';
-import { FILM } from '../filmList';
+import { Film } from '../../film';
+import { FILM } from '../../filmList';
 @Component({
   selector: 'app-formulaire-film',
   templateUrl: 'formulaire-film.component.html',
