@@ -1,0 +1,32 @@
+<form *ngIf=film (ngSubmit)="onSubmit()" #filmForm="ngForm">
+  <div class="row">
+    <div class="col s8 offset-s2">
+      <div class="card-panel">
+
+        <!-- Pokemon name -->
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" class="form-control" id="name"
+                 required
+                 pattern="^[a-zA-Z0-9àéèç]{1,25}$"
+                 [(ngModel)]="film.name" name="name"
+                 #name="ngModel">
+
+          <div [hidden]="name.valid || name.pristine"
+               class="card-panel red accent-1">
+            Le nom du film est requis (1-25).
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="section center">
+          <button type="submit"
+                  class="waves-effect waves-light btn"
+                  [disabled]="!filmForm.form.valid">
+            Valider</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</form>
+<!--<h3 *ngIf="!film" class="center">Aucun film à éditer...</h3>-->
