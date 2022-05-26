@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://images.alphacoders.com/115/thumb-1920-1156309.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
