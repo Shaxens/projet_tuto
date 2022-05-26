@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormulaireFilmComponent } from './formulaire-film/formulaire-film.component';
+import { FormulaireFilmComponent } from './DirectoryFilm/formulaire-film/formulaire-film.component';
 import { MainPageComponent } from './main-page/main-page.component';
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  "imports": [RouterModule.forRoot(routes)],
+  "exports": [RouterModule]
 })
 export class AppRoutingModule { }
