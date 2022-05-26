@@ -7,7 +7,7 @@ import { FILM } from '../filmList';
   styleUrls: ['formulaire-film.component.css']
 })
 export class FormulaireFilmComponent implements OnInit {
-film = new Film(3,"jambon");
+film = new Film(3,"jambon","yolo");
   constructor() { }
 
   ngOnInit(): void {
