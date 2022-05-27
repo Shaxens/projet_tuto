@@ -8,7 +8,7 @@ import {catchError, Observable, of, tap} from "rxjs";
 export class FilmServiceService {
   constructor(private http: HttpClient) {
   }
-
+//methode http
   getFilmList(): Observable<Film[]> {//on va recevoir la liste des Projets ou film qui arriveront dans le temps
     return this.http.get<Film[]>('api/films').pipe(//url + ce qu'on envoie et pipe pour definir ce que je veux faire en plus du traitement de la requete
       tap((response) => this.log(response)),//si je reçois une reponse alors je console log

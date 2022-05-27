@@ -1,10 +1,15 @@
 export class Film {
-
+  id: number;
+  name: string;
+  description: string;
   constructor(
-    public id: number,
-    public name: string,
-    public description: string,
+    id: number = 22,
+    name: string = 'nooommmmm',
+    description: string = 'descriptionn'
 
-  ) {  }
+  ) {
+    this.id = id;
+    this.name = name;
+    this.description = description; }
 
 }

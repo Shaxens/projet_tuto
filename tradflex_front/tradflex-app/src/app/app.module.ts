@@ -12,6 +12,7 @@ import { MainPageComponent } from "./main-page/main-page.component";
 import {HttpClientModule} from "@angular/common/http";
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import { InMemoryDataService} from "./in-memory-data.service";
+import { EditProjetComponent } from './DirectoryFilm/edit-projet/edit-projet.component';
 
 // @ts-ignore
 @NgModule({
@@ -20,7 +21,8 @@ import { InMemoryDataService} from "./in-memory-data.service";
     FormulaireFilmComponent,
 
     TousLesFilmsComponent,
-    MainPageComponent
+    MainPageComponent,
+    EditProjetComponent
 
   ],
   imports: [
