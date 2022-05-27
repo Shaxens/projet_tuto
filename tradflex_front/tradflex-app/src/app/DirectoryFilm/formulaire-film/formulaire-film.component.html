@@ -18,7 +18,9 @@
 
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <input type="text" class="form-control" id="description" required pattern="^[a-zA-Z0-9àéèç]{1,80}$" [(ngModel)]="film.description" name="description" #description="ngModel">
+                    <input type="text" class="form-control" id="description"
+                           required pattern="^[a-zA-Z0-9àéèç]{0,80}$"
+                           [(ngModel)]="film.description" name="description" #description="ngModel">
 
                     <div [hidden]="description.valid || description.pristine" class="card-panel red accent-1">
                         max de caractere 80 (1-80).
