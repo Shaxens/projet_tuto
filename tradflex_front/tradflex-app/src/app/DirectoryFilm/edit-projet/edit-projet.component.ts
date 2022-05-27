@@ -14,7 +14,7 @@ export class EditProjetComponent implements OnInit {
               private filmService : FilmServiceService)
   { }
 
-  ngOnInit(): {
+  ngOnInit(): void {
     const filmId: string|null = this.route.snapshot.paramMap.get('id');
     if(filmId){
     this.filmService.getFilmById(+filmId)

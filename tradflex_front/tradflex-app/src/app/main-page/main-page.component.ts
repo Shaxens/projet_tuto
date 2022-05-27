@@ -15,7 +15,12 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   creerProjet() {
     this.router.navigate(['creerProjet']);
   }
+  
+  modifierProjet(film : Film) {
+    this.router.navigate(['modifier', film.id]);
+    }
 }
