@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 })
 export class FormulaireProjetComponent implements OnInit {
 
-  @Input() projet: Projet;
+  @Input() projet: Projet|undefined;
 
 constructor(
   private projetService: ProjetService,

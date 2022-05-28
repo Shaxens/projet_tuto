@@ -49,6 +49,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tradflex" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -87,6 +88,8 @@
       <workItem from="1651870267850" duration="1775000" />
       <workItem from="1653732388284" duration="65000" />
       <workItem from="1653732595988" duration="126000" />
+      <workItem from="1653749321230" duration="52000" />
+      <workItem from="1653749422645" duration="361000" />
     </task>
     <servers />
   </component>
