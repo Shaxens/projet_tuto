@@ -6,17 +6,17 @@
 
 
 <carousel [height]="300" [width]="1500" [cellsToShow]="3" style="margin: 0 auto;">
-    <ng-container *ngFor="let film of filmList">
-        <ng-container *ngIf="film.status == false">
+    <ng-container *ngFor="let projet of projetList">
+        <ng-container *ngIf="projet.status == false">
 
             <div class="carousel-cell">
-                <span id="hoverProjet"><img style="height: 70%;" [src]="film.picture">
+                <span id="hoverProjet"><img style="height: 70%;" [src]="projet.picture">
                     <span id="hoverBtn">
                         <a id="removeBtn" ><i class="small material-icons">remove_circle</i></a>
-                        <a id="buildBtn" (click)="modifierProjet(film)" ><i class="small material-icons">build</i></a>
+                        <a id="buildBtn" (click)="modifierProjet(projet)" ><i class="small material-icons">build</i></a>
                     </span>
                 </span>
-                <h4 style="text-align: center;">{{ film.name }}</h4>
+                <h4 style="text-align: center;">{{ projet.name }}</h4>
             </div>
         </ng-container>
     </ng-container>
@@ -27,17 +27,17 @@
 </div>
 
 <carousel [height]="300" [width]="1500" [cellsToShow]="3" style="margin: 0 auto;">
-    <ng-container *ngFor="let film of filmList">
-        <ng-container *ngIf="film.status == true">
+    <ng-container *ngFor="let projet of projetList">
+        <ng-container *ngIf="projet.status == true">
 
             <div class="carousel-cell">
-                <span id="hoverProjet"><img style="height: 70%;" [src]="film.picture">
+                <span id="hoverProjet"><img style="height: 70%;" [src]="projet.picture">
                     <span id="hoverBtn">
                         <a id="removeBtn" href="" ><i class="small material-icons">remove_circle</i></a>
                         <a id="buildBtn" href="" ><i class="small material-icons">build</i></a>
                     </span>
                 </span>
-                <h4 style="text-align: center;">{{ film.name }}</h4>
+                <h4 style="text-align: center;">{{ projet.name }}</h4>
             </div>
         </ng-container>
     </ng-container>
