@@ -7,7 +7,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 const routes: Routes = [
   { path: 'accueil', component: MainPageComponent },
   { path: 'creerProjet', component: FormulaireProjetComponent },
-  { path: 'editer/:id', component: ParametreProjetComponent }, // Component à modifier plus tard pour pouvoir editer un fichier (sous-titre / film)
+  //{ path: 'editer/:id', component: ParametreProjetComponent }, // Component à modifier plus tard pour pouvoir editer un fichier (sous-titre / film)
   { path: 'parametre/:id', component: ParametreProjetComponent }, // Permet de modifier un titre, une description, un statut ou une image
   { path: '', redirectTo: 'accueil', pathMatch: 'full' }
 ];

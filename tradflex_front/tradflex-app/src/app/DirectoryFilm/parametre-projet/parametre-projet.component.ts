@@ -14,6 +14,7 @@ import { ProjetService } from '../projet.service';
   styles: [
 ]
 })
+
 export class ParametreProjetComponent implements OnInit {
   projet : Projet|undefined;
   constructor(private route: ActivatedRoute,
