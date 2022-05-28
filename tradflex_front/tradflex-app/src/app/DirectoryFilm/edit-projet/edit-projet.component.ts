@@ -5,8 +5,15 @@ import { ProjetService } from '../projet.service';
 
 @Component({
   selector: 'app-edit-projet',
-  templateUrl: './edit-projet.component.html',
-  styleUrls: ['./edit-projet.component.css']
+  template:`
+    <h2 class="center"> Editer {{ projet?.name }}</h2>
+<p *ngIf="projet" class="center">
+<img [src]="projet.picture">
+</p>
+<app-formulaire-projet *ngIf="projet" [projet]="projet"></app-formulaire-projet>
+  `,
+  styles: [
+  ]
 })
 export class EditProjetComponent implements OnInit {
   projet : Projet|undefined;

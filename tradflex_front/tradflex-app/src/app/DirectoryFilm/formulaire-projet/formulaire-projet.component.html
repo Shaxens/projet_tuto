@@ -1,4 +1,4 @@
-<form *ngIf=film (ngSubmit)="onSubmit()" #filmForm="ngForm">
+<form *ngIf=projet (ngSubmit)="onSubmit()" #projetForm="ngForm">
     <h3 text-align="center">Formulaire</h3>
     <div class="row">
         <div class="card-panel">
@@ -9,7 +9,7 @@
         <input type="text" class="form-control" id="name"
                required
                pattern="^[a-zA-Z0-9àéèç]{1,25}$"
-               [(ngModel)]="film.name" name="name"
+               [(ngModel)]="projet.name" name="name"
                #name="ngModel">
         <div [hidden]="name.valid || name.pristine"
              class="card-panel red accent-1">
@@ -20,7 +20,7 @@
                     <label for="description">Description</label>
                     <input type="text" class="form-control" id="description"
                            required pattern="^[a-zA-Z0-9àéèç]{0,80}$"
-                           [(ngModel)]="film.description" name="description" #description="ngModel">
+                           [(ngModel)]="projet.description" name="description" #description="ngModel">
 
                     <div [hidden]="description.valid || description.pristine" class="card-panel red accent-1">
                         max de caractere 80 (1-80).
@@ -29,7 +29,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="section center">
-                    <button type="submit" class="waves-effect waves-light btn" [disabled]="!filmForm.form.valid">
+                    <button type="submit" class="waves-effect waves-light btn" [disabled]="!projetForm.form.valid">
             Valider</button>
                 </div>
             </div>
