@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormulaireFilmComponent } from './formulaire-film/formulaire-film.component';
+import { EditProjetComponent } from './DirectoryFilm/edit-projet/edit-projet.component';
+import { FormulaireProjetComponent } from './DirectoryFilm/formulaire-projet/formulaire-projet.component';
 import { MainPageComponent } from './main-page/main-page.component';
 
 const routes: Routes = [
   { path: 'accueil', component: MainPageComponent },
-  { path: 'creerProjet', component: FormulaireFilmComponent },
+  { path: 'creerProjet', component: FormulaireProjetComponent },
+  { path: 'parametre/:id', component: EditProjetComponent },
+  { path: 'editer/:id', component: EditProjetComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' }
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  "imports": [RouterModule.forRoot(routes)],
+  "exports": [RouterModule]
 })
 export class AppRoutingModule { }

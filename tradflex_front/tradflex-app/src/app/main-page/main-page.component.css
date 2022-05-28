@@ -1,0 +1,50 @@
+#addBtn {
+    color: white;
+}
+
+#buildBtn {
+    opacity: 0;
+}
+
+#editBtn {
+    opacity: 0;
+}
+
+#removeBtn {
+    opacity: 0;
+}
+
+#hoverProjet:hover #removeBtn {
+    opacity: 1;
+    display: inline;
+    color: white;
+    position: relative;
+    bottom: 45%;
+    left: 15%;
+}
+
+#hoverProjet:hover #editBtn {
+    opacity: 1;
+    display: inline;
+    color: white;
+    position: relative;
+    bottom: 45%;
+    left: 40%;
+}
+
+#hoverProjet:hover #buildBtn {
+    opacity: 1;
+    display: inline;
+    color: white;
+    position: relative;
+    bottom: 45%;
+    left: 65%;
+}
+
+#hoverProjet:hover img {
+    filter: brightness(20%);
+}
+
+.carousel-cell h4 {
+    margin-top: -20px;
+}

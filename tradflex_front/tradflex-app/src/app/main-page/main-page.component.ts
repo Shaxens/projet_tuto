@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {Film} from "../film";
-import {FILM} from "../filmList";
+import {Projet} from "../projet";
+import {PROJET} from "../projetList";
 
 @Component({
   selector: 'app-main-page',
@@ -9,13 +9,18 @@ import {FILM} from "../filmList";
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-  filmList: Film[] = FILM;
+  projetList: Projet[] = PROJET;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+
   creerProjet() {
     this.router.navigate(['creerProjet']);
   }
+
+  modifierProjet(projet : Projet) {
+    this.router.navigate(['modifier', projet.id]);
+    }
 }
