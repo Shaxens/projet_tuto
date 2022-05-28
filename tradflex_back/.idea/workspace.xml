@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0c9b139-ab19-402e-923c-d9a80e76d7e9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadao/src/iDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/javadao/src/iDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +49,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tradflex" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Arthur\Desktop\IUT\projets\projet_tuto\tradflex_back\tradflex\src\main\java\fr\tradflex" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="fr.tradflex.projet" />
     </key>
@@ -87,6 +91,7 @@
       <workItem from="1651870267850" duration="1775000" />
       <workItem from="1653732388284" duration="65000" />
       <workItem from="1653732595988" duration="126000" />
+      <workItem from="1653750304908" duration="51000" />
     </task>
     <servers />
   </component>
