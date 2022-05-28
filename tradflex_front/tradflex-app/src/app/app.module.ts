@@ -6,8 +6,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
-import { TousLesFilmsComponent } from './DirectoryFilm/tous-les-films/tous-les-films.component';
-import { FormulaireFilmComponent } from './DirectoryFilm/formulaire-film/formulaire-film.component';
+import { TousLesProjetsComponent } from './DirectoryFilm/tous-les-projets/tous-les-projets.component';
+import { FormulaireProjetComponent } from './DirectoryFilm/formulaire-projet/formulaire-projet.component';
 import { MainPageComponent } from "./main-page/main-page.component";
 import {HttpClientModule} from "@angular/common/http";
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
@@ -18,9 +18,9 @@ import { EditProjetComponent } from './DirectoryFilm/edit-projet/edit-projet.com
 @NgModule({
   declarations: [
     AppComponent,
-    FormulaireFilmComponent,
+    FormulaireProjetComponent,
 
-    TousLesFilmsComponent,
+    TousLesProjetsComponent,
     MainPageComponent,
     EditProjetComponent
 

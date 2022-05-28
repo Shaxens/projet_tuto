@@ -1,5 +1,5 @@
 
-export class Film {
+export class Projet {
   id: number;
   name: string;
   description: string;
@@ -14,7 +14,7 @@ export class Film {
   ) {
     this.id = id;
     this.name = name;
-    this.description = description; 
+    this.description = description;
     this.picture = picture;
     this.status = status;
   }

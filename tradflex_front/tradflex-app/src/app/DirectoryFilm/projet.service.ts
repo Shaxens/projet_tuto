@@ -1,62 +1,62 @@
 import { Injectable } from '@angular/core';
-import {Film} from "../film";
+import {Projet} from "../projet";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, of, tap} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class FilmServiceService {
+export class ProjetService {
   constructor(private http: HttpClient) {
   }
 //methode http
-  getFilmList(): Observable<Film[]> {//on va recevoir la liste des Projets ou film qui arriveront dans le temps
-    return this.http.get<Film[]>('api/films').pipe(//url + ce qu'on envoie et pipe pour definir ce que je veux faire en plus du traitement de la requete
+  getProjetList(): Observable<Projet[]> {//on va recevoir la liste des Projets ou film qui arriveront dans le temps
+    return this.http.get<Projet[]>('api/projets').pipe(//url + ce qu'on envoie et pipe pour definir ce que je veux faire en plus du traitement de la requete
       tap((response) => this.log(response)),//si je reçois une reponse alors je console log
       catchError((error) => this.handleError(error, []))
     );
   }
 
-  getFilmById(filmId: number): Observable<Film | undefined> {//peut renvoyer undefined
-    return this.http.get<Film>(`api/films/${filmId}`).pipe(
+  getProjetById(projetId: number): Observable<Projet | undefined> {//peut renvoyer undefined
+    return this.http.get<Projet>(`api/projets/${projetId}`).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, undefined))//Si aucun film ou projet return undefined
     );
   }
-  searchFilmList(term: string): Observable<Film[]> {
+  searchProjetList(term: string): Observable<Projet[]> {
     if(term.length <= 1) {
       return of([]);
     }
 
-    return this.http.get<Film[]>(`api/films/?name=${term}`).pipe(
+    return this.http.get<Projet[]>(`api/projets/?name=${term}`).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, []))
     );
   }
 
-  updateFilm(film: Film): Observable<null> {
+  updateProjet(projet: Projet): Observable<null> {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
 
-    return this.http.put('api/films',film, httpOptions).pipe(
+    return this.http.put('api/projets',projet, httpOptions).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, null))
     );
   }
 
-  addFilm(film: Film): Observable<Film> {
+  addFilm(projet: Projet): Observable<Projet> {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
 
-    return this.http.post<Film>('api/films', film, httpOptions).pipe(
+    return this.http.post<Projet>('api/projets', projet, httpOptions).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, null))
     );
   }
 
-  deleteFilmById(filmId: number): Observable<null> {
-    return this.http.delete(`api/films/${filmId}`).pipe(
+  deletePorjetById(projetId: number): Observable<null> {
+    return this.http.delete(`api/projets/${projetId}`).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, null))
     );

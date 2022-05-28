@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Film } from '../../film';
-import { FilmServiceService } from '../film-service.service';
+import { Projet } from '../../projet';
+import { ProjetService } from '../projet.service';
 
 @Component({
   selector: 'app-edit-projet',
@@ -9,18 +9,18 @@ import { FilmServiceService } from '../film-service.service';
   styleUrls: ['./edit-projet.component.css']
 })
 export class EditProjetComponent implements OnInit {
-  film : Film|undefined;
+  projet : Projet|undefined;
   constructor(private route: ActivatedRoute,
-              private filmService : FilmServiceService)
+              private projetService : ProjetService)
   { }
 
   ngOnInit(): void {
-    const filmId: string|null = this.route.snapshot.paramMap.get('id');
-    if(filmId){
-    this.filmService.getFilmById(+filmId)
-    .subscribe(film => this.film = film);
+    const projetId: string|null = this.route.snapshot.paramMap.get('id');
+    if(projetId){
+    this.projetService.getProjetById(+projetId)
+    .subscribe(projet => this.projet = projet);
   } else {
-  this.film = undefined;
+  this.projet = undefined;
 }
 }
 
