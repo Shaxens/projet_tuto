@@ -8,6 +8,7 @@ import { ProjetService } from '../projet.service';
   templateUrl: './parametre-projet.component.html',
   styleUrls: ['./parametre-projet.component.css']
 })
+
 export class ParametreProjetComponent implements OnInit {
   projet : Projet|undefined;
   constructor(private route: ActivatedRoute,
