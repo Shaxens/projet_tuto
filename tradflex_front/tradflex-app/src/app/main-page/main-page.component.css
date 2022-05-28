@@ -6,6 +6,10 @@
     opacity: 0;
 }
 
+#editBtn {
+    opacity: 0;
+}
+
 #removeBtn {
     opacity: 0;
 }
@@ -16,7 +20,16 @@
     color: white;
     position: relative;
     bottom: 45%;
-    left: 20%;
+    left: 15%;
+}
+
+#hoverProjet:hover #editBtn {
+    opacity: 1;
+    display: inline;
+    color: white;
+    position: relative;
+    bottom: 45%;
+    left: 40%;
 }
 
 #hoverProjet:hover #buildBtn {
@@ -25,11 +38,11 @@
     color: white;
     position: relative;
     bottom: 45%;
-    left: 70%;
+    left: 65%;
 }
 
 #hoverProjet:hover img {
-    filter: brightness(50%);
+    filter: brightness(20%);
 }
 
 .carousel-cell h4 {
