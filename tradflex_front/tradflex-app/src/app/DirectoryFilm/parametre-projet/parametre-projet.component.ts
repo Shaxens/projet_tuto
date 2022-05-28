@@ -4,11 +4,11 @@ import { Projet } from '../../projet';
 import { ProjetService } from '../projet.service';
 
 @Component({
-  selector: 'app-edit-projet',
-  templateUrl: './edit-projet.component.html',
-  styleUrls: ['./edit-projet.component.css']
+  selector: 'app-parametre-projet',
+  templateUrl: './parametre-projet.component.html',
+  styleUrls: ['./parametre-projet.component.css']
 })
-export class EditProjetComponent implements OnInit {
+export class ParametreProjetComponent implements OnInit {
   projet : Projet|undefined;
   constructor(private route: ActivatedRoute,
               private projetService : ProjetService)

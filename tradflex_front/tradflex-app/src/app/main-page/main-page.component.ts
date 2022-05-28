@@ -20,7 +20,11 @@ export class MainPageComponent implements OnInit {
     this.router.navigate(['creerProjet']);
   }
 
+  editerProjet(projet: Projet) {
+    this.router.navigate(['editer', projet.id]);
+  }
+  
   modifierProjet(projet : Projet) {
-    this.router.navigate(['modifier', projet.id]);
+    this.router.navigate(['parametre', projet.id]);
     }
 }
