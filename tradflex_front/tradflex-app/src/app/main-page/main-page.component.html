@@ -1,5 +1,6 @@
 <div style="padding: 40px 0 10px 270px;">
     <h3 style="display: inline;padding-right: 10px;">Projets en cours</h3>
+
     <a id="addBtn" href="creerProjet" onclick="creerProjet()" style="vertical-align:sub;"><i class="small material-icons">add_circle</i></a>
 </div>
 
@@ -12,7 +13,7 @@
             <div class="carousel-cell">
                 <span id="hoverProjet"><img style="height: 70%;" [src]="projet.picture">
                     <span id="hoverBtn">
-                        <a id="removeBtn" ><i class="small material-icons">remove_circle</i></a>
+                        <a id="removeBtn" (click)="SupprimerProjet(projet)"><i class="small material-icons">remove_circle</i></a>
                         <a id="editBtn" (click)="editerProjet(projet)"><i class="small material-icons">mode_edit</i></a>
                         <a id="buildBtn" (click)="modifierProjet(projet)" ><i class="small material-icons">build</i></a>
                     </span>

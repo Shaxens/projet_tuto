@@ -3,10 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormulaireProjetComponent } from './DirectoryFilm/formulaire-projet/formulaire-projet.component';
 import { ParametreProjetComponent } from './DirectoryFilm/parametre-projet/parametre-projet.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import {AjoutProjetComponent} from "./DirectoryFilm/ajout-projet/ajout-projet.component";
 
 const routes: Routes = [
   { path: 'accueil', component: MainPageComponent },
-  { path: 'creerProjet', component: FormulaireProjetComponent },
+  { path: 'creerProjet/add', component: AjoutProjetComponent },
   //{ path: 'editer/:id', component: ParametreProjetComponent }, // Component à modifier plus tard pour pouvoir editer un fichier (sous-titre / film)
   { path: 'parametre/:id', component: ParametreProjetComponent }, // Permet de modifier un titre, une description, un statut ou une image
   { path: '', redirectTo: 'accueil', pathMatch: 'full' }

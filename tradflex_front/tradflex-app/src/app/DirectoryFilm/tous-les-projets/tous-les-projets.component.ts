@@ -17,5 +17,9 @@ projetList : Projet[] | undefined;
       .subscribe(projetList => this.projetList= projetList);//je m'abonne au flux de donnée de l'observable pour recevoir une liste de film
     //quand je reçois la liste de film je la pousse dans filmList
   }
+deleteProjet(projet :Projet){
+
+    this.projetService.deleteProjetById(projet.id).subscribe( );
+}
 
 }

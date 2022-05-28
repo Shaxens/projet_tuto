@@ -33,18 +33,18 @@ export class ProjetService {
     );
   }
 
-  updateProjet(projet: Projet): Observable<null> {
+  updateProjet(projet: Projet|undefined): Observable<null> {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
 
-    return this.http.put('api/projets',projet, httpOptions).pipe(
+    return this.http.put('api/projets',projet, httpOptions).pipe(//methode put pour enregistrer les modif d'un objet
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, null))
     );
   }
 
-  addFilm(projet: Projet): Observable<Projet> {
+  addProjet(projet: Projet|undefined): Observable<Projet> {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
@@ -55,7 +55,7 @@ export class ProjetService {
     );
   }
 
-  deletePorjetById(projetId: number): Observable<null> {
+  deleteProjetById(projetId: number): Observable<null> {
     return this.http.delete(`api/projets/${projetId}`).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, null))

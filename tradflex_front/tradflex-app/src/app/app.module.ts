@@ -13,6 +13,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import { InMemoryDataService} from "./in-memory-data.service";
 import { ParametreProjetComponent } from "./DirectoryFilm/parametre-projet/parametre-projet.component";
+import { AjoutProjetComponent } from './DirectoryFilm/ajout-projet/ajout-projet.component';
 
 // @ts-ignore
 @NgModule({
@@ -22,7 +23,8 @@ import { ParametreProjetComponent } from "./DirectoryFilm/parametre-projet/param
 
     TousLesProjetsComponent,
     MainPageComponent,
-    ParametreProjetComponent
+    ParametreProjetComponent,
+    AjoutProjetComponent
 
   ],
   imports: [
