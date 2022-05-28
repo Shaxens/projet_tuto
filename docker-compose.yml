@@ -1,0 +1,20 @@
+version: '3'
+services:
+  webapp:
+    build: tradflex_back
+    ports:
+      - "8080:8080"
+    links:
+      - "mysql_db:db"
+  mysql_db:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./FirmBookBackBDD/src/main/resources/db:/docker-entrypoint-initdb.d
