@@ -7,7 +7,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 const routes: Routes = [
   { path: 'accueil', component: MainPageComponent },
   { path: 'creerProjet', component: FormulaireProjetComponent },
-  { path: 'modifier/:id', component: EditProjetComponent },
+  { path: 'parametre/:id', component: EditProjetComponent },
+  { path: 'editer/:id', component: EditProjetComponent },
   { path: '', redirectTo: 'accueil', pathMatch: 'full' }
 ];
 
