@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/tradflex/tradflex.iml" filepath="$PROJECT_DIR$/tradflex/tradflex.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tradflex_back.iml" filepath="$PROJECT_DIR$/.idea/tradflex_back.iml" />
     </modules>
   </component>
