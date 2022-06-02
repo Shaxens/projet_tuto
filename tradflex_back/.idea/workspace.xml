@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0c9b139-ab19-402e-923c-d9a80e76d7e9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/javadao/src/iDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/javadao/src/iDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tradflex_back.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tradflex_back.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/javadao/src/iDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/UserRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/UserRessource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,17 +52,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tradflex" />
-<<<<<<< HEAD
-    <property name="nodejs_package_manager_path" value="npm" />
-=======
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
->>>>>>> 6c3dc9e83645a4b5a91e7c0da0cbefac59502aa5
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Arthur\Desktop\IUT\projets\projet_tuto\tradflex_back\tradflex\src\main\java\fr\tradflex" />
@@ -63,7 +65,7 @@
       <recent name="fr.tradflex.projet" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.tradflex.App" />
       <module name="tradflex_back" />
@@ -77,8 +79,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="tradflex" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.tradflex.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.tradflex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Application" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -95,12 +111,9 @@
       <workItem from="1651870267850" duration="1775000" />
       <workItem from="1653732388284" duration="65000" />
       <workItem from="1653732595988" duration="126000" />
-<<<<<<< HEAD
       <workItem from="1653749321230" duration="52000" />
       <workItem from="1653749422645" duration="361000" />
-=======
       <workItem from="1653750304908" duration="51000" />
->>>>>>> 6c3dc9e83645a4b5a91e7c0da0cbefac59502aa5
     </task>
     <servers />
   </component>
