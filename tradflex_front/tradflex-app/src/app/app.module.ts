@@ -20,7 +20,6 @@ import { AjoutProjetComponent } from './DirectoryFilm/ajout-projet/ajout-projet.
   declarations: [
     AppComponent,
     FormulaireProjetComponent,
-
     TousLesProjetsComponent,
     MainPageComponent,
     ParametreProjetComponent,

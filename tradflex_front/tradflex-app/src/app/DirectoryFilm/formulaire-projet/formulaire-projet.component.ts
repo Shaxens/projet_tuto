@@ -13,12 +13,12 @@ export class FormulaireProjetComponent implements OnInit {
   isAddForm: boolean|undefined;
 constructor(
   private projetService: ProjetService,
-  private router: Router,
+  private router: Router
 
 ) { }
 
   ngOnInit(): void {
-  this.isAddForm = this.router.url.includes('add');//si l'url contient add j ajoute un projet sinon je modifie
+  this.isAddForm = this.router.url.includes('creerProjet');//si l'url contient add j ajoute un projet sinon je modifie
   }
   onSubmit(){
   //console.log('Submit form');

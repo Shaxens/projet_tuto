@@ -7,7 +7,7 @@ import {AjoutProjetComponent} from "./DirectoryFilm/ajout-projet/ajout-projet.co
 
 const routes: Routes = [
   { path: 'accueil', component: MainPageComponent },
-  { path: 'creerProjet/add', component: AjoutProjetComponent },
+  { path: 'creerProjet', component: AjoutProjetComponent },
   //{ path: 'editer/:id', component: ParametreProjetComponent }, // Component à modifier plus tard pour pouvoir editer un fichier (sous-titre / film)
   { path: 'parametre/:id', component: ParametreProjetComponent }, // Permet de modifier un titre, une description, un statut ou une image
   { path: '', redirectTo: 'accueil', pathMatch: 'full' }
