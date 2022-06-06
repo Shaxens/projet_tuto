@@ -1,12 +1,16 @@
 package fr.tradflex.ressource;
 
+import fr.tradflex.dao.ProjectDAO;
+import fr.tradflex.dao.ProjectDAOImpl;
 import fr.tradflex.model.Project;
+import fr.tradflex.model.ProjectWhenCreating;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Optional;
 
 /**
  * Représente l'ensemble des API des REST liée à un ou des {@link Project}.
@@ -14,39 +18,34 @@ import java.util.concurrent.atomic.AtomicInteger;
 @RestController
 public class ProjectRessource {
 
-    private static final AtomicInteger ID = new AtomicInteger(1);
-    private static final List<Project> PROJECTS = new ArrayList<>();
+    private final ProjectDAO projectDAO;
 
-    static {
-        PROJECTS.add(new Project(Integer.toString(ID.getAndIncrement()), "toto"));
-        PROJECTS.add(new Project(Integer.toString(ID.getAndIncrement()), "tata"));
-        PROJECTS.add(new Project(Integer.toString(ID.getAndIncrement()), "tata"));
+    @Autowired
+    public ProjectRessource(ProjectDAO projectDAO) {
+        this.projectDAO = projectDAO;
     }
 
     @GetMapping(path = "/project/{id}")
     public Project getProject(@PathVariable(name = "id") String id) {
-        return PROJECTS.stream()
-                .filter(project -> id.equals(project.id()))
-                .findFirst()
+        return Optional.ofNullable(projectDAO.getById(id))
                 .orElseThrow(ResourceNotFoundException::new);
     }
 
     @GetMapping(path = "/project")
     public List<ProjectAsId> getProjects() {
-        return PROJECTS.stream().map(ProjectAsId::new).toList();
+        return projectDAO.getAll().stream()
+                .map(ProjectAsId::new)
+                .toList();
     }
 
     @PostMapping("/project")
     public Project createProject(@RequestBody ProjectWhenCreating project) {
-        var newProject = new Project(Integer.toString(ID.getAndIncrement()), project.nom());
-        PROJECTS.add(newProject);
-        return newProject;
+        return projectDAO.create(project);
     }
 
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public static class ResourceNotFoundException extends RuntimeException {}
 
-    private record ProjectWhenCreating(String nom) {}
 
     private record ProjectAsId(String id, String url) {
         ProjectAsId(Project project) {
