@@ -9,7 +9,7 @@ public class ConnexionDbDAO {
     // Constructeur
     private ConnexionDbDAO()
     {
-
+        instance = ConnexionDbDAO.getInstance();
     }
 
     // METHODES
@@ -21,7 +21,7 @@ public class ConnexionDbDAO {
         return instance;
     }
 
-    public static Connection creeConnexion() //
+    public static Connection creerConnection() //
     {
         String url = "jdbc:mysql://devbdd.iutmetz.univ-lorraine.fr:3306/oury16u_tradFlex";
         String login = "oury16u_appli";

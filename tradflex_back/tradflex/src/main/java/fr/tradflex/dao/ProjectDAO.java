@@ -7,7 +7,7 @@ import java.util.Collection;
 
 public interface ProjectDAO {
 
-    Project getById(int id);
+    Project getById(String id);
 
     Collection<Project> getAll();
 

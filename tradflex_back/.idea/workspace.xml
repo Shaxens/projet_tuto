@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0c9b139-ab19-402e-923c-d9a80e76d7e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tradflex/src/test/java/fr/tradflex/ressource/TestProjectRessource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/tradflex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/tradflex.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ConnexionDbDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ConnexionDbDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +18,9 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,28 +54,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "D:/Devs_Project/DUT/projet_tuto/tradflex_back",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "d3e19482922bd970fa5fe62cd2310e12",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Arthur\Desktop\IUT\projets\projet_tuto\tradflex_back\tradflex\src\main\java\fr\tradflex" />
@@ -95,7 +85,7 @@
       <recent name="fr.tradflex.ressource" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestProjectRessource2">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="TestProjectRessource" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tradflex" />
       <extension name="coverage">
@@ -160,23 +150,23 @@
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="tradflex" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.tradflex.Application" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="fr.tradflex.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.tradflex.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Application" />
         <item itemvalue="JUnit.TestProjectRessource2" />
         <item itemvalue="JUnit.TestProjectRessource2.test_getProjet_avec_projet_inexistant" />
         <item itemvalue="JUnit.TestProjectRessource2.test_getProjet_avec_projet_existant" />
-        <item itemvalue="Spring Boot.Application" />
         <item itemvalue="JUnit.TestProjectRessource" />
       </list>
     </recent_temporary>
@@ -199,6 +189,7 @@
       <workItem from="1654202121301" duration="56000" />
       <workItem from="1654538512601" duration="288000" />
       <workItem from="1654538827260" duration="4206000" />
+      <workItem from="1654548362555" duration="2286000" />
     </task>
     <servers />
   </component>

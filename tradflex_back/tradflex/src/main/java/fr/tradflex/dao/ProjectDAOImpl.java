@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -15,7 +16,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
 public final class ProjectDAOImpl implements ProjectDAO {
-    private static final ConnexionDbDAO  instanceConnexion = ConnexionDbDAO.getInstance();
     private static final AtomicInteger ID = new AtomicInteger(1);
     private static final List<Project> PROJECTS = new ArrayList<>();
 
@@ -26,25 +26,25 @@ public final class ProjectDAOImpl implements ProjectDAO {
     }
 
     @Override
-    public Project getById(int id)
+    public Project getById(String id)
     {
         try
         {
-            Connection connection = ConnexionDbDAO.creeConnexion();
+            Connection connection = ConnexionDbDAO.creerConnection();
             PreparedStatement req = connection.prepareStatement("SELECT * FROM PROJECT WHERE PROJECT.id = ?");
-            req.setInt(1, id);
+            req.setString(1, id);
             ResultSet res = req.executeQuery();
             if (res.next())
             {
-                int idProject = res.getInt("id");
+                String idProject = Integer.toString(res.getInt("id"));
                 String name = res.getString("name");
                 String description = res.getString("description");
                 String picture = res.getString("picture");
                 ProjectStatus status = ProjectStatus.of(res.getInt("status"));
 
-                return new Project(String.valueOf(idProject), name, description, picture, status);
+                return new Project(idProject, name, description, picture, status);
             }
-        } catch (Exception e)
+        } catch (SQLException e)
         {
             System.out.println(e.getMessage());
         }
