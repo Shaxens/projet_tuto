@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0c9b139-ab19-402e-923c-d9a80e76d7e9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ConnexionDbDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ConnexionDbDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" afterDir="false" />
@@ -189,7 +188,7 @@
       <workItem from="1654202121301" duration="56000" />
       <workItem from="1654538512601" duration="288000" />
       <workItem from="1654538827260" duration="4206000" />
-      <workItem from="1654548362555" duration="2286000" />
+      <workItem from="1654548362555" duration="11548000" />
     </task>
     <servers />
   </component>

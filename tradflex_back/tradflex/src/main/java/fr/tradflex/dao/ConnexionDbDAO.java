@@ -9,7 +9,7 @@ public class ConnexionDbDAO {
     // Constructeur
     private ConnexionDbDAO()
     {
-        instance = ConnexionDbDAO.getInstance();
+
     }
 
     // METHODES

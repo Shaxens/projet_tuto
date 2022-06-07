@@ -9,20 +9,38 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
 public final class ProjectDAOImpl implements ProjectDAO {
-    private static final AtomicInteger ID = new AtomicInteger(1);
-    private static final List<Project> PROJECTS = new ArrayList<>();
+    private ConnexionDbDAO connexionDbDAO;
 
-    static {
-        PROJECTS.add(new Project(Integer.toString(ID.getAndIncrement()), "toto", "yoloo", "https://media.gqmagazine.fr/photos/5dea6130061f7b00082f3405/master/pass/Djangounchained.jpg", 1));
-        PROJECTS.add(new Project(Integer.toString(ID.getAndIncrement()), "tonton", "yaloo", "https://media.gqmagazine.fr/photos/5dea6130061f7b00082f3405/master/pass/Djangounchained.jpg", ProjectStatus.ABANDONNE));
-        PROJECTS.add(new Project(Integer.toString(ID.getAndIncrement()), "tata", "yohoo", "https://media.gqmagazine.fr/photos/5dea6130061f7b00082f3405/master/pass/Djangounchained.jpg", ProjectStatus.TERMINE));
+    public ProjectDAOImpl()
+    {
+        this.connexionDbDAO = ConnexionDbDAO.getInstance();
+    }
+
+    private static int getLastIds() throws SQLException
+    {
+        Connection connection = ConnexionDbDAO.creerConnection();
+        PreparedStatement req = connection.prepareStatement("SELECT id FROM PROJECT");
+        ResultSet res = req.executeQuery();
+        int lastId = 0;
+
+        if (res.next())
+        {
+            while (res.next())
+            {
+                lastId = res.getInt("id");
+            }
+        }
+        return lastId;
+    }
+
+    private int incrementLastId() throws SQLException
+    {
+        return getLastIds() + 1;
     }
 
     @Override
@@ -44,9 +62,9 @@ public final class ProjectDAOImpl implements ProjectDAO {
 
                 return new Project(idProject, name, description, picture, status);
             }
-        } catch (SQLException e)
+        } catch (SQLException SQLe)
         {
-            System.out.println(e.getMessage());
+            System.out.println(SQLe.getMessage());
         }
         return null;
     }
@@ -54,26 +72,64 @@ public final class ProjectDAOImpl implements ProjectDAO {
     @Override
     public Collection<Project> getAll()
     {
-        return PROJECTS;
+        try
+        {
+            Connection connection = ConnexionDbDAO.creerConnection();
+            PreparedStatement req = connection.prepareStatement("SELECT * FROM PROJECT");
+            ResultSet res = req.executeQuery();
+
+            List<Project> listProjects = new ArrayList<>();
+            while (res.next())
+            {
+                String idProject = Integer.toString(res.getInt("id"));
+                String name = res.getString("name");
+                String description = res.getString("description");
+                String picture = res.getString("picture");
+                ProjectStatus status = ProjectStatus.of(res.getInt("status"));
+
+                listProjects.add(new Project(idProject, name, description, picture, status));
+            }
+
+            return listProjects;
+        } catch (SQLException SQLe)
+        {
+            System.out.println(SQLe.getMessage());
+        }
+        return null;
     }
 
     @Override
-    public Project create(ProjectWhenCreating project)
-    {
-        var newProject = new Project(Integer.toString(ID.getAndIncrement()), project.name(), project.description(), project.picture(), ProjectStatus.EN_COURS);
-        PROJECTS.add(newProject);
-        return newProject;
+    public Project create(ProjectWhenCreating project) {
+        try
+        {
+            var newProject = new Project(String.valueOf(incrementLastId()), project.name(), project.description(), project.picture(), ProjectStatus.EN_COURS);
+            Connection connection = ConnexionDbDAO.creerConnection();
+            PreparedStatement req = connection.prepareStatement("INSERT INTO PROJECT (id, name, description, picture, status) VALUES (?, ?, ?, ?, ?)");
+            req.setString(1, newProject.id());
+            req.setString(2, newProject.name());
+            req.setString(3, newProject.description());
+            req.setString(4, newProject.picture());
+            req.setInt(5, newProject.status().getId());
+
+            req.executeQuery();
+            return newProject;
+        } catch (SQLException SQLe)
+        {
+            System.out.println(SQLe.getMessage());
+        }
+        return null;
     }
 
     @Override
     public Project update(Project project)
     {
+        // SQL
         return null;
     }
 
     @Override
     public void delete(String id)
     {
-
+        // SQL
     }
 }
