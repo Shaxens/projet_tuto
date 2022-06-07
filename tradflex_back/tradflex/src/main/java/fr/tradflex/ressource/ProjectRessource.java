@@ -43,6 +43,18 @@ public class ProjectRessource {
         return projectDAO.create(project);
     }
 
+    @DeleteMapping("/project/{id}")
+    public boolean deleteProject(@PathVariable(name = "id") String id)
+    {
+        return projectDAO.delete(id);
+    }
+
+    @PutMapping("/project")
+    public Project updateProject(@RequestBody Project project)
+    {
+        return projectDAO.update(project);
+    }
+
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public static class ResourceNotFoundException extends RuntimeException {}
 

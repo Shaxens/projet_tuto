@@ -16,5 +16,5 @@ public interface ProjectDAO {
 
     Project update(Project project);
 
-    void delete(String id);
+    boolean delete(String id);
 }
