@@ -20,19 +20,15 @@
                     </div>
 
                 </div>
-              <!-- projet image-->
-              <div *ngIf="isAddForm" class="form-group">
-                <label for="picture">Image</label>
-                <input type="url" class="form-control" id="picture"
-                       required
-                       [(ngModel)]="projet.picture" name="picture"
-                       #picture="ngModel">
+                <!-- projet image-->
+                <div *ngIf="isAddForm" class="form-group">
+                    <label for="picture">Image</label>
+                    <input type="url" class="form-control" id="picture" required [(ngModel)]="projet.picture" name="picture" #picture="ngModel">
 
-                <div [hidden]="picture.valid || picture.pristine"
-                     class="card-panel red accent-1">
-                  L'image du projet est requise.
+                    <div [hidden]="picture.valid || picture.pristine" class="card-panel red accent-1">
+                        L'image du projet est requise.
+                    </div>
                 </div>
-              </div>
                 <div class="divider"></div>
                 <div class="section center">
                     <button type="submit" class="waves-effect waves-light btn" [disabled]="!projetForm.form.valid">

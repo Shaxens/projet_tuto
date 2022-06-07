@@ -4,8 +4,6 @@
     <a id="addBtn" href="creerProjet" onclick="creerProjet()" style="vertical-align:sub;"><i class="small material-icons">add_circle</i></a>
 </div>
 
-
-
 <carousel [height]="300" [width]="1500" [cellsToShow]="3" style="margin: 0 auto;">
     <ng-container *ngFor="let projet of projetList">
         <ng-container *ngIf="projet.status == false">

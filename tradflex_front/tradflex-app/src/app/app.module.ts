@@ -14,18 +14,17 @@ import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import { InMemoryDataService} from "./in-memory-data.service";
 import { ParametreProjetComponent } from "./DirectoryFilm/parametre-projet/parametre-projet.component";
 import { AjoutProjetComponent } from './DirectoryFilm/ajout-projet/ajout-projet.component';
+import { EditerProjetComponent } from './editer-projet/editer-projet.component';
 
-// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
     FormulaireProjetComponent,
-
     TousLesProjetsComponent,
     MainPageComponent,
     ParametreProjetComponent,
-    AjoutProjetComponent
-
+    AjoutProjetComponent,
+    EditerProjetComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +32,7 @@ import { AjoutProjetComponent } from './DirectoryFilm/ajout-projet/ajout-projet.
     HttpClientModule,//declaration de l'api simuler pour pouvoir l'utiliser dans tout l'application
     HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService ,{dataEncapsulation : false}),
     AppRoutingModule,
-    IvyCarouselModule
+    IvyCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
