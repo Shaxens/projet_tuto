@@ -1,5 +1,9 @@
 <div style="width: 100%">
-    <div id="waveform"></div>
+    <div id="waveform">
+        <div>Total time: <span id="time-total">0.00</span> seconds</div>
+        <div>Current time: <span id="time-current">0.00</span> seconds</div>
+        <div>Ramaining time: <span id="time-remaining">0.00</span> seconds</div>
+    </div>
 
     <div id="wave-timeline"></div>
     <div *ngIf="video" class="controls">
