@@ -17,11 +17,17 @@ export class ProjetService {
   }
 
   getProjetById(projetId: number): Observable<Projet | undefined> {//peut renvoyer undefined
-    return this.http.get<Projet>(`api/projets/${projetId}`).pipe(
+    return this.http.get<Projet>(`http://localhost:8080/project/${projetId}`, {
+      headers:  {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      }
+    }).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, undefined))//Si aucun film ou projet return undefined
     );
   }
+
   searchProjetList(term: string): Observable<Projet[]> {
     if(term.length <= 1) {
       return of([]);

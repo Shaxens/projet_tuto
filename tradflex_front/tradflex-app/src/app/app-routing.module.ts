@@ -4,11 +4,12 @@ import { FormulaireProjetComponent } from './DirectoryFilm/formulaire-projet/for
 import { ParametreProjetComponent } from './DirectoryFilm/parametre-projet/parametre-projet.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import {AjoutProjetComponent} from "./DirectoryFilm/ajout-projet/ajout-projet.component";
+import { EditerProjetComponent } from './editer-projet/editer-projet.component';
 
 const routes: Routes = [
   { path: 'accueil', component: MainPageComponent },
   { path: 'creerProjet', component: AjoutProjetComponent },
-  //{ path: 'editer/:id', component: ParametreProjetComponent }, // Component à modifier plus tard pour pouvoir editer un fichier (sous-titre / film)
+  { path: 'editer/:id', component: EditerProjetComponent }, // Component à modifier plus tard pour pouvoir editer un fichier (sous-titre / film)
   { path: 'parametre/:id', component: ParametreProjetComponent }, // Permet de modifier un titre, une description, un statut ou une image
   { path: '', redirectTo: 'accueil', pathMatch: 'full' }
 ];
