@@ -4,6 +4,9 @@ import fr.tradflex.dao.ProjectDAO;
 import fr.tradflex.dao.ProjectDAOImpl;
 import fr.tradflex.model.Project;
 import fr.tradflex.model.ProjectWhenCreating;
+import org.apache.logging.log4j.simple.SimpleLogger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -20,6 +23,7 @@ import java.util.Optional;
 public class ProjectRessource {
 
     private final ProjectDAO projectDAO;
+    private static final Logger LOG = LoggerFactory.getLogger(ProjectRessource.class);
 
     @Autowired
     public ProjectRessource(ProjectDAO projectDAO) {
@@ -28,6 +32,7 @@ public class ProjectRessource {
 
     @GetMapping(path = "/project/{id}")
     public Project getProject(@PathVariable(name = "id") String id) {
+        LOG.info("toto");
         return Optional.ofNullable(projectDAO.getById(id))
                 .orElseThrow(ResourceNotFoundException::new);
     }
