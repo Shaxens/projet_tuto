@@ -30,7 +30,7 @@ import { AjoutProjetComponent } from './DirectoryFilm/ajout-projet/ajout-projet.
     BrowserModule,
     FormsModule,
     HttpClientModule,//declaration de l'api simuler pour pouvoir l'utiliser dans tout l'application
-    HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService ,{dataEncapsulation : false}),
+    //HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService ,{dataEncapsulation : false}),
     AppRoutingModule,
     IvyCarouselModule
   ],
