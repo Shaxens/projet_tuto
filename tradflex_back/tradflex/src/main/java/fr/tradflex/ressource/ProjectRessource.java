@@ -16,6 +16,7 @@ import java.util.Optional;
  * Représente l'ensemble des API des REST liée à un ou des {@link Project}.
  */
 @RestController
+@CrossOrigin
 public class ProjectRessource {
 
     private final ProjectDAO projectDAO;
