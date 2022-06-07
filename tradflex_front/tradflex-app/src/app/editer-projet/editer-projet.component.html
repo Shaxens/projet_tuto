@@ -1,0 +1,8 @@
+<div style="width: 100%">
+    <div id="waveform"></div>
+    <div id="wave-timeline"></div>
+    <div *ngIf="wave" class="controls">
+        <button (click)="onStopPressed()">Stop</button>
+    </div>
+
+    <button (click)="onPreviewPressed()">Click me</button>

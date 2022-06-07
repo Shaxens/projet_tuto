@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0c9b139-ab19-402e-923c-d9a80e76d7e9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/javadao/src/iDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/javadao/src/iDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ConnexionDbDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ConnexionDbDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +18,15 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -45,41 +54,119 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tradflex" />
-<<<<<<< HEAD
-    <property name="nodejs_package_manager_path" value="npm" />
-=======
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
->>>>>>> 6c3dc9e83645a4b5a91e7c0da0cbefac59502aa5
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Arthur\Desktop\IUT\projets\projet_tuto\tradflex_back\tradflex\src\main\java\fr\tradflex" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="fr.tradflex.ressource" />
+      <recent name="" />
+      <recent name="fr.tradflex" />
       <recent name="fr.tradflex.projet" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="fr.tradflex.ressource" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fr.tradflex.ressource" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.tradflex.App" />
-      <module name="tradflex_back" />
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="TestProjectRessource" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tradflex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.tradflex.ressource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.tradflex.ressource" />
+      <option name="MAIN_CLASS_NAME" value="fr.tradflex.ressource.TestProjectRessource" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestProjectRessource2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tradflex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.tradflex.ressource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.tradflex.ressource" />
+      <option name="MAIN_CLASS_NAME" value="fr.tradflex.ressource.TestProjectRessource2" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestProjectRessource2.test_getProjet_avec_projet_existant" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tradflex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.tradflex.ressource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.tradflex.ressource" />
+      <option name="MAIN_CLASS_NAME" value="fr.tradflex.ressource.TestProjectRessource2" />
+      <option name="METHOD_NAME" value="test_getProjet_avec_projet_existant" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestProjectRessource2.test_getProjet_avec_projet_inexistant" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tradflex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.tradflex.ressource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.tradflex.ressource" />
+      <option name="MAIN_CLASS_NAME" value="fr.tradflex.ressource.TestProjectRessource2" />
+      <option name="METHOD_NAME" value="test_getProjet_avec_projet_inexistant" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="tradflex" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="fr.tradflex.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.tradflex.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.TestProjectRessource2" />
+        <item itemvalue="JUnit.TestProjectRessource2.test_getProjet_avec_projet_inexistant" />
+        <item itemvalue="JUnit.TestProjectRessource2.test_getProjet_avec_projet_existant" />
+        <item itemvalue="JUnit.TestProjectRessource" />
       </list>
     </recent_temporary>
   </component>
@@ -95,12 +182,13 @@
       <workItem from="1651870267850" duration="1775000" />
       <workItem from="1653732388284" duration="65000" />
       <workItem from="1653732595988" duration="126000" />
-<<<<<<< HEAD
       <workItem from="1653749321230" duration="52000" />
       <workItem from="1653749422645" duration="361000" />
-=======
       <workItem from="1653750304908" duration="51000" />
->>>>>>> 6c3dc9e83645a4b5a91e7c0da0cbefac59502aa5
+      <workItem from="1654202121301" duration="56000" />
+      <workItem from="1654538512601" duration="288000" />
+      <workItem from="1654538827260" duration="4206000" />
+      <workItem from="1654548362555" duration="11548000" />
     </task>
     <servers />
   </component>

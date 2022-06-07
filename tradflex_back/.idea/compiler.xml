@@ -6,10 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tradflex_back" />
+        <module name="tradflex" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="tradflex" target="17" />
       <module name="tradflex_back" target="1.7" />
     </bytecodeTargetLevel>
   </component>

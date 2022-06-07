@@ -8,7 +8,7 @@ import { EditerProjetComponent } from './editer-projet/editer-projet.component';
 
 const routes: Routes = [
   { path: 'accueil', component: MainPageComponent },
-  { path: 'creerProjet/add', component: AjoutProjetComponent },
+  { path: 'creerProjet', component: AjoutProjetComponent },
   { path: 'editer/:id', component: EditerProjetComponent }, // Component à modifier plus tard pour pouvoir editer un fichier (sous-titre / film)
   { path: 'parametre/:id', component: ParametreProjetComponent }, // Permet de modifier un titre, une description, un statut ou une image
   { path: '', redirectTo: 'accueil', pathMatch: 'full' }
