@@ -3,6 +3,7 @@ package fr.tradflex.dao;
 import fr.tradflex.model.Project;
 import fr.tradflex.model.ProjectStatus;
 import fr.tradflex.model.ProjectWhenCreating;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
@@ -14,27 +15,25 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
 public final class ProjectDAOImpl implements ProjectDAO {
-    private ConnexionDbDAO connexionDbDAO;
 
-    public ProjectDAOImpl()
-    {
-        this.connexionDbDAO = ConnexionDbDAO.getInstance();
+    private final ConnexionDbDAO connection;
+
+    @Autowired
+    public ProjectDAOImpl(ConnexionDbDAO connection) {
+        this.connection = connection;
     }
 
-    private static int getLastIds() throws SQLException
+    private int getLastIds() throws SQLException
     {
-        Connection connection = ConnexionDbDAO.creerConnection();
-        PreparedStatement req = connection.prepareStatement("SELECT id FROM PROJECT");
+        PreparedStatement req = connection.connection().prepareStatement("SELECT id FROM PROJECT");
         ResultSet res = req.executeQuery();
         int lastId = 0;
 
-        if (res.next())
+        while (res.next())
         {
-            while (res.next())
-            {
-                lastId = res.getInt("id");
-            }
+            lastId = Integer.parseInt(res.getString("id"));
         }
+
         return lastId;
     }
 
@@ -48,8 +47,7 @@ public final class ProjectDAOImpl implements ProjectDAO {
     {
         try
         {
-            Connection connection = ConnexionDbDAO.creerConnection();
-            PreparedStatement req = connection.prepareStatement("SELECT * FROM PROJECT WHERE PROJECT.id = ?");
+            PreparedStatement req = connection.connection().prepareStatement("SELECT * FROM PROJECT WHERE PROJECT.id = ?");
             req.setString(1, id);
             ResultSet res = req.executeQuery();
             if (res.next())
@@ -74,8 +72,7 @@ public final class ProjectDAOImpl implements ProjectDAO {
     {
         try
         {
-            Connection connection = ConnexionDbDAO.creerConnection();
-            PreparedStatement req = connection.prepareStatement("SELECT * FROM PROJECT");
+            PreparedStatement req = connection.connection().prepareStatement("SELECT * FROM PROJECT");
             ResultSet res = req.executeQuery();
 
             List<Project> listProjects = new ArrayList<>();
@@ -103,15 +100,14 @@ public final class ProjectDAOImpl implements ProjectDAO {
         try
         {
             var newProject = new Project(String.valueOf(incrementLastId()), project.name(), project.description(), project.picture(), ProjectStatus.EN_COURS);
-            Connection connection = ConnexionDbDAO.creerConnection();
-            PreparedStatement req = connection.prepareStatement("INSERT INTO PROJECT (id, name, description, picture, status) VALUES (?, ?, ?, ?, ?)");
+            PreparedStatement req = connection.connection().prepareStatement("INSERT INTO PROJECT (id, name, description, picture, status) VALUES (?, ?, ?, ?, ?)");
             req.setString(1, newProject.id());
             req.setString(2, newProject.name());
             req.setString(3, newProject.description());
             req.setString(4, newProject.picture());
             req.setInt(5, newProject.status().getId());
+            req.executeUpdate();
 
-            req.executeQuery();
             return newProject;
         } catch (SQLException SQLe)
         {
@@ -123,13 +119,38 @@ public final class ProjectDAOImpl implements ProjectDAO {
     @Override
     public Project update(Project project)
     {
-        // SQL
+        try
+        {
+            PreparedStatement req = connection.connection().prepareStatement("UPDATE PROJECT SET name = ?, description = ?, picture = ?, status = ? WHERE PROJECT.id = ?");
+            req.setString(1, project.name());
+            req.setString(2, project.description());
+            req.setString(3, project.picture());
+            req.setInt(4, project.status().getId());
+            req.setString(5, project.id());
+            req.executeUpdate();
+
+            return getById(project.id());
+        } catch (SQLException SQLe)
+        {
+            System.out.println(SQLe.getMessage());
+        }
         return null;
     }
 
     @Override
-    public void delete(String id)
+    public boolean delete(String id)
     {
-        // SQL
+        try
+        {
+            PreparedStatement req = connection.connection().prepareStatement("DELETE FROM PROJECT WHERE PROJECT.id = ?");
+            req.setString(1, id);
+            req.executeUpdate();
+
+            return true;
+        } catch (SQLException SQLe)
+        {
+            System.out.println(SQLe.getMessage());
+            return false;
+        }
     }
 }

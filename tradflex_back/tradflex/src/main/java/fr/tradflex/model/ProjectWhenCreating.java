@@ -1,3 +1,5 @@
 package fr.tradflex.model;
 
-public record ProjectWhenCreating(String name, String description, String picture) {}
+import java.io.Serializable;
+
+public record ProjectWhenCreating(String name, String description, String picture) implements Serializable {}
