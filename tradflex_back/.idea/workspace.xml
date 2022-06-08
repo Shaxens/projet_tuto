@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0c9b139-ab19-402e-923c-d9a80e76d7e9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ConnexionDbDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ConnexionDbDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/ProjectWhenCreating.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/ProjectWhenCreating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +191,7 @@
       <workItem from="1654538512601" duration="288000" />
       <workItem from="1654538827260" duration="4206000" />
       <workItem from="1654548362555" duration="11548000" />
-      <workItem from="1654600618258" duration="7909000" />
+      <workItem from="1654600618258" duration="8883000" />
     </task>
     <servers />
   </component>
