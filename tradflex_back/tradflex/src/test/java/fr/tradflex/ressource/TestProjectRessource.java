@@ -1,8 +1,8 @@
 package fr.tradflex.ressource;
 
 import fr.tradflex.dao.ProjectDAO;
-import fr.tradflex.model.Project;
-import fr.tradflex.model.ProjectStatus;
+import fr.tradflex.model.project.Project;
+import fr.tradflex.model.project.ProjectStatus;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

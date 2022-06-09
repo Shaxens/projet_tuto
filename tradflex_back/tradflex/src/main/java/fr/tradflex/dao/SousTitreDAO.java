@@ -1,7 +1,7 @@
 package fr.tradflex.dao;
 
-import fr.tradflex.model.SousTitre;
-import fr.tradflex.model.SousTitreWhenCreating;
+import fr.tradflex.model.sousTitre.SousTitre;
+import fr.tradflex.model.sousTitre.SousTitreWhenCreating;
 
 import java.util.Collection;
 

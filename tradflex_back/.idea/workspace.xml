@@ -6,9 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="d0c9b139-ab19-402e-923c-d9a80e76d7e9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/project/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/ProjectStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/project/ProjectStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/ProjectWhenCreating.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/project/ProjectWhenCreating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/SousTitre.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/sousTitre/SousTitre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/SousTitreWhenCreating.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/sousTitre/SousTitreWhenCreating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/TimeCodeSRT.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/sousTitre/TimeCodeSRT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/SousTitreRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/SousTitreRessource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/test/java/fr/tradflex/ressource/TestProjectRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/test/java/fr/tradflex/ressource/TestProjectRessource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +204,7 @@
       <workItem from="1654774186732" duration="621000" />
       <workItem from="1654775438374" duration="1341000" />
       <workItem from="1654780370865" duration="1342000" />
-      <workItem from="1654782730841" duration="3711000" />
+      <workItem from="1654782730841" duration="6510000" />
     </task>
     <servers />
   </component>

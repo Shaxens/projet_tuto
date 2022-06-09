@@ -1,8 +1,8 @@
 package fr.tradflex.dao;
 
-import fr.tradflex.model.Project;
-import fr.tradflex.model.ProjectStatus;
-import fr.tradflex.model.ProjectWhenCreating;
+import fr.tradflex.model.project.Project;
+import fr.tradflex.model.project.ProjectStatus;
+import fr.tradflex.model.project.ProjectWhenCreating;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

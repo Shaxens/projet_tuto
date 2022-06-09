@@ -1,15 +1,12 @@
 package fr.tradflex.ressource;
 
 import fr.tradflex.dao.ProjectDAO;
-import fr.tradflex.dao.ProjectDAOImpl;
-import fr.tradflex.model.Project;
-import fr.tradflex.model.ProjectWhenCreating;
-import org.apache.logging.log4j.simple.SimpleLogger;
+import fr.tradflex.model.project.Project;
+import fr.tradflex.model.project.ProjectWhenCreating;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

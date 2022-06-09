@@ -1,11 +1,8 @@
 package fr.tradflex.ressource;
 
-import fr.tradflex.dao.ProjectDAO;
 import fr.tradflex.dao.SousTitreDAO;
-import fr.tradflex.model.Project;
-import fr.tradflex.model.ProjectWhenCreating;
-import fr.tradflex.model.SousTitre;
-import fr.tradflex.model.SousTitreWhenCreating;
+import fr.tradflex.model.sousTitre.SousTitre;
+import fr.tradflex.model.sousTitre.SousTitreWhenCreating;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

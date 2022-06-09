@@ -1,4 +1,4 @@
-package fr.tradflex.model;
+package fr.tradflex.model.project;
 
 import java.util.stream.Stream;
 

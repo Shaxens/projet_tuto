@@ -1,9 +1,7 @@
 package fr.tradflex.dao;
 
-import fr.tradflex.model.Project;
-import fr.tradflex.model.ProjectStatus;
-import fr.tradflex.model.SousTitre;
-import fr.tradflex.model.SousTitreWhenCreating;
+import fr.tradflex.model.sousTitre.SousTitre;
+import fr.tradflex.model.sousTitre.SousTitreWhenCreating;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
