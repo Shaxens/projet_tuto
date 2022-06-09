@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d0c9b139-ab19-402e-923c-d9a80e76d7e9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/SousTitreRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/SousTitreRessource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +53,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "WebServerToolWindowFactoryState": "false",
+    "spring.configuration.checksum": "d3e19482922bd970fa5fe62cd2310e12",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Arthur\Desktop\IUT\projets\projet_tuto\tradflex_back\tradflex\src\main\java\fr\tradflex" />
@@ -142,13 +149,13 @@
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="tradflex" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.tradflex.Application" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="fr.tradflex.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.tradflex.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,6 +192,9 @@
       <workItem from="1654600618258" duration="8883000" />
       <workItem from="1654731296010" duration="4053000" />
       <workItem from="1654774186732" duration="621000" />
+      <workItem from="1654775438374" duration="1341000" />
+      <workItem from="1654780370865" duration="1342000" />
+      <workItem from="1654782730841" duration="3711000" />
     </task>
     <servers />
   </component>

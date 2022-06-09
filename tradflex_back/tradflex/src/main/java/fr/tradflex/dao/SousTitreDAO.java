@@ -10,7 +10,7 @@ public interface SousTitreDAO {
 
     Collection<SousTitre> getAll();
 
-    SousTitre create(SousTitreWhenCreating sousTitre);
+    boolean create(SousTitreWhenCreating sousTitre);
 
     SousTitre update(SousTitre sousTitre);
 
