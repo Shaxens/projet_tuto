@@ -6,12 +6,10 @@ import fr.tradflex.model.ProjectWhenCreating;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
 public final class ProjectDAOImpl implements ProjectDAO {

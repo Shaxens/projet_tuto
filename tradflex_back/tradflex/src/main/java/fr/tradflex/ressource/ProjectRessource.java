@@ -32,7 +32,6 @@ public class ProjectRessource {
 
     @GetMapping(path = "/project/{id}")
     public Project getProject(@PathVariable(name = "id") String id) {
-        LOG.info("toto");
         return Optional.ofNullable(projectDAO.getById(id))
                 .orElseThrow(ResourceNotFoundException::new);
     }
