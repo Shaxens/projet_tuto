@@ -3,6 +3,7 @@ package fr.tradflex.dao;
 import fr.tradflex.model.project.Project;
 import fr.tradflex.model.project.ProjectStatus;
 import fr.tradflex.model.project.ProjectWhenCreating;
+import fr.tradflex.model.sousTitre.SousTitre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -86,6 +87,33 @@ public final class ProjectDAOImpl implements ProjectDAO {
             }
 
             return listProjects;
+        } catch (SQLException SQLe)
+        {
+            System.out.println(SQLe.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public Collection<SousTitre> getAllSousTitre(int id)
+    {
+        try
+        {
+            PreparedStatement req = connection.connection().prepareStatement("SELECT * FROM SOUS_TITRE WHERE SOUS_TITRE.idProject = ?");
+            req.setInt(1, id);
+            ResultSet res = req.executeQuery();
+            List<SousTitre> listeSousTitre = new ArrayList<>();
+            while (res.next())
+            {
+                int idSousTitre = res.getInt("id");
+                String body = res.getString("body");
+                int timeCodeBegin = res.getInt("timeCodeBegin");
+                int timeCodeEnd = res.getInt("timeCodeEnd");
+                int idProject = res.getInt("idProject");
+
+                listeSousTitre.add(new SousTitre(idSousTitre, body, timeCodeBegin, timeCodeEnd, idProject));
+            }
+            return listeSousTitre;
         } catch (SQLException SQLe)
         {
             System.out.println(SQLe.getMessage());

@@ -30,8 +30,9 @@ public final class SousTitreDaoImpl implements SousTitreDAO {
                 String body = res.getString("body");
                 int timeCodeBegin = res.getInt("timeCodeBegin");
                 int timeCodeEnd = res.getInt("timeCodeEnd");
+                int idProject = res.getInt("idProject");
 
-                return new SousTitre(idSousTitre, body, timeCodeBegin, timeCodeEnd);
+                return new SousTitre(idSousTitre, body, timeCodeBegin, timeCodeEnd, idProject);
             }
         } catch (SQLException SQLe)
         {
@@ -54,8 +55,9 @@ public final class SousTitreDaoImpl implements SousTitreDAO {
                 String body = res.getString("body");
                 int timeCodeBegin = res.getInt("timeCodeBegin");
                 int timeCodeEnd = res.getInt("timeCodeEnd");
+                int idProject = res.getInt("idProject");
 
-                listSousTitre.add(new SousTitre(id, body, timeCodeBegin, timeCodeEnd));
+                listSousTitre.add(new SousTitre(id, body, timeCodeBegin, timeCodeEnd, idProject));
             }
 
             return listSousTitre;
@@ -70,13 +72,18 @@ public final class SousTitreDaoImpl implements SousTitreDAO {
     {
         try
         {
-            PreparedStatement req = connection.connection().prepareStatement("INSERT INTO SOUS_TITRE (body, timeCodeBegin, timeCodeEnd) VALUES (?, ?, ?)");
+            PreparedStatement req = connection.connection().prepareStatement("INSERT INTO SOUS_TITRE (body, timeCodeBegin, timeCodeEnd, idProject) VALUES (?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             req.setString(1, sousTitre.body());
             req.setInt(2, sousTitre.timeCodeBegin());
             req.setInt(3, sousTitre.timeCodeEnd());
+            req.setInt(4, sousTitre.idProject());
 
             req.executeUpdate();
 
+            var rs = req.getGeneratedKeys();
+            rs.next();
+            rs.getInt(1);
+            // TODO On recup l'id créé, return un objet du coup
             return true;
         } catch (SQLException SQLe)
         {

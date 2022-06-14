@@ -1,6 +1,6 @@
 package fr.tradflex.model.sousTitre;
 
-public record SousTitre(int id, String body, int timeCodeBegin, int timeCodeEnd) {
+public record SousTitre(int id, String body, int timeCodeBegin, int timeCodeEnd, int idProject) {
     public String formateToSRT()
     {
         String sousTitreFormatSRT = "";
