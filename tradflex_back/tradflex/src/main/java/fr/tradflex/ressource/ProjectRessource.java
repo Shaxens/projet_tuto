@@ -3,12 +3,14 @@ package fr.tradflex.ressource;
 import fr.tradflex.dao.ProjectDAO;
 import fr.tradflex.model.project.Project;
 import fr.tradflex.model.project.ProjectWhenCreating;
+import fr.tradflex.model.sousTitre.SousTitre;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,6 +42,12 @@ public class ProjectRessource {
                 .toList();
     }
 
+    @GetMapping(path = "/project/{id}/sousTitre")
+    public Collection<SousTitre> getSousTitres(@PathVariable(name = "id") int id) {
+        return projectDAO.getAllSousTitre(id);
+    }
+
+
     @PostMapping("/project")
     public Project createProject(@RequestBody ProjectWhenCreating project) {
         return projectDAO.create(project);
@@ -56,6 +64,8 @@ public class ProjectRessource {
     {
         return projectDAO.update(project);
     }
+
+
 
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public static class ResourceNotFoundException extends RuntimeException {}
