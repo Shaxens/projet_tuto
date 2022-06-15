@@ -1,7 +1,18 @@
-#wave-timeline {
-    background-color: white;
+h1 {
+    text-align: center;
 }
 
-video {
-    max-width: 500px;
+.time {
+    position: absolute;
+    right: 0;
+    top: 5%;
+}
+
+.sousTitre {
+    position: absolute;
+    right: 0;
+    top: 14%;
+    max-width: 40%;
+    max-height: 55%;
+    overflow: scroll;
 }

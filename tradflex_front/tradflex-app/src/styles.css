@@ -3,8 +3,6 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(https://images.alphacoders.com/115/thumb-1920-1156309.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgb(2, 9, 15);
     color: white;
 }
