@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0c9b139-ab19-402e-923c-d9a80e76d7e9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/sousTitre/SousTitre.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/sousTitre/SousTitre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/sousTitre/SousTitreWhenCreating.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/sousTitre/SousTitreWhenCreating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/process/parser/SousTitreParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/process/parser/SousTitreParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/process/parser/timer/TimerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/process/parser/timer/TimerParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/test/java/fr/tradflex/process/parser/timer/TestTimerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/test/java/fr/tradflex/process/parser/timer/TestTimerParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/tradflex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/tradflex.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +222,7 @@
       <workItem from="1654846082284" duration="785000" />
       <workItem from="1654849283449" duration="48000" />
       <workItem from="1655216528548" duration="6892000" />
-      <workItem from="1655294338606" duration="5584000" />
+      <workItem from="1655294338606" duration="5732000" />
     </task>
     <servers />
   </component>

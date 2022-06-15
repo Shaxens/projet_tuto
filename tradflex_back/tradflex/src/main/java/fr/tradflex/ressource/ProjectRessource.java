@@ -81,7 +81,7 @@ public class ProjectRessource {
 
     private record ProjectAsId(String id, String url) {
         ProjectAsId(Project project) {
-            this(project.id(), "localhost:8080/project/"+project.id());
+            this(project.id(), "http://localhost:8080/project/"+project.id());
         }
     }
 }
