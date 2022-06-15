@@ -23,7 +23,9 @@ constructor(
   onSubmit(){
   //console.log('Submit form');
     if(this.isAddForm){
+      console.log(this.projetService.getProjetList().subscribe());
     this.projetService.addProjet(this.projet).subscribe();
+    console.log(this.projetService.getProjetList().subscribe());
     }else {
       this.projetService.updateProjet(this.projet).subscribe()
     }

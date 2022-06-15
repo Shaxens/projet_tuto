@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Projet} from "../projet";
+import {Projet, ProjetId} from "../projet";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, of, tap} from "rxjs";
 import { SousTitre } from '../sousTitre';
@@ -10,8 +10,8 @@ export class ProjetService {
   constructor(private http: HttpClient) {
   }
 //methode http
-  getProjetList(): Observable<Projet[]> {//on va recevoir la liste des Projets ou film qui arriveront dans le temps
-    return this.http.get<Projet[]>('api/projets').pipe(//url + ce qu'on envoie et pipe pour definir ce que je veux faire en plus du traitement de la requete
+  getProjetList(): Observable<ProjetId[]> {//on va recevoir la liste des Projets ou film qui arriveront dans le temps
+    return this.http.get<Projet[]>('http://localhost:8080/project').pipe(//url + ce qu'on envoie et pipe pour definir ce que je veux faire en plus du traitement de la requete
       tap((response) => this.log(response)),//si je reçois une reponse alors je console log
       catchError((error) => this.handleError(error, []))
     );
@@ -45,18 +45,18 @@ export class ProjetService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
 
-    return this.http.put('api/projets',projet, httpOptions).pipe(//methode put pour enregistrer les modif d'un objet
+    return this.http.put('http://localhost:8080/project',projet, httpOptions).pipe(//methode put pour enregistrer les modif d'un objet
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, null))
     );
   }
 
   addProjet(projet: Projet|undefined): Observable<Projet> {
-    const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    };
 
-    return this.http.post<Projet>('api/projets', projet, httpOptions).pipe(
+    return this.http.post<Projet>("http://localhost:8080/project", projet, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'})
+    }).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, null))
     );

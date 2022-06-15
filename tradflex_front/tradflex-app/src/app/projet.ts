@@ -21,3 +21,14 @@ export class Projet {
   }
 
 }
+
+export class ProjetId {
+  id: number;
+  url: string;
+
+
+  constructor(id: number, url: string) {
+    this.id = id;
+    this.url = url;
+  }
+}
