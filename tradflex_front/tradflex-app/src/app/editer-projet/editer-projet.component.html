@@ -10,18 +10,20 @@
         <div>Remaining time: <span id="time-remaining">0.00</span> seconds</div>
 
     </div>
+    <div class="sousTitre" *ngIf="sousTitreList">
 
-    <div class="sousTitre">
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore velit nemo excepturi commodi unde ut soluta aliquam fugit itaque illo reprehenderit tenetur voluptate modi doloremque incidunt voluptatibus earum vero?</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore velit nemo excepturi commodi unde ut soluta aliquam fugit itaque illo reprehenderit tenetur voluptate modi doloremque incidunt voluptatibus earum vero?</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore velit nemo excepturi commodi unde ut soluta aliquam fugit itaque illo reprehenderit tenetur voluptate modi doloremque incidunt voluptatibus earum vero?</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore velit nemo excepturi commodi unde ut soluta aliquam fugit itaque illo reprehenderit tenetur voluptate modi doloremque incidunt voluptatibus earum vero?</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore velit nemo excepturi commodi unde ut soluta aliquam fugit itaque illo reprehenderit tenetur voluptate modi doloremque incidunt voluptatibus earum vero?</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore velit nemo excepturi commodi unde ut soluta aliquam fugit itaque illo reprehenderit tenetur voluptate modi doloremque incidunt voluptatibus earum vero?</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore velit nemo excepturi commodi unde ut soluta aliquam fugit itaque illo reprehenderit tenetur voluptate modi doloremque incidunt voluptatibus earum vero?</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore velit nemo excepturi commodi unde ut soluta aliquam fugit itaque illo reprehenderit tenetur voluptate modi doloremque incidunt voluptatibus earum vero?</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore velit nemo excepturi commodi unde ut soluta aliquam fugit itaque illo reprehenderit tenetur voluptate modi doloremque incidunt voluptatibus earum vero?</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore velit nemo excepturi commodi unde ut soluta aliquam fugit itaque illo reprehenderit tenetur voluptate modi doloremque incidunt voluptatibus earum vero?</li>
+        <div *ngFor="let sousTitre of sousTitreList">
+            <div *ngIf="sousTitre">
+
+                <li>{{sousTitre.body}}</li>
+                <li>{{sousTitre.id}}</li>
+                <li>{{sousTitre.idProject}}</li>
+                <li>{{sousTitre.timeCodeBegin}}</li>
+                <li>{{sousTitre.timeCodeEnd}}</li>
+                <li>test</li>
+            </div>
+        </div>
+
     </div>
 
     <div *ngIf="video" class="controls">

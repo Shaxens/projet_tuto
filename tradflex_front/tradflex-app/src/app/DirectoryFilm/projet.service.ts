@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Projet} from "../projet";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, of, tap} from "rxjs";
+import { SousTitre } from '../sousTitre';
 @Injectable({
   providedIn: 'root'
 })
@@ -77,4 +78,23 @@ export class ProjetService {
     return of(errorValue);
   }
 
+  getSousTitre(projetId: number): Observable<undefined> {
+    return this.http.get<SousTitre>(`http://localhost:8080/project/${projetId}/sousTitre`, {
+      headers:  {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      }
+    }).pipe(tap((response) => this.log(response)),
+    catchError((error) => this.handleError(error,undefined)));
+  }
+
+  getSousTitreById(id: number ,projetId: number): Observable<undefined> {
+    return this.http.get<SousTitre>(`http://localhost:8080/project/${projetId}/sousTitre/${id}`, {
+      headers:  {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      }
+    }).pipe(tap((response) => this.log(response)),
+    catchError((error) => this.handleError(error,undefined)));
+  }
 }

@@ -4,6 +4,7 @@ import WaveSurfer from 'wavesurfer.js';
 import TimelinePlugin from 'wavesurfer.js/src/plugin/timeline';
 import { ProjetService } from '../DirectoryFilm/projet.service';
 import { Projet } from '../projet';
+import { SousTitre } from '../sousTitre';
 
 @Component({
   selector: 'app-editer-projet',
@@ -13,7 +14,8 @@ import { Projet } from '../projet';
 
 export class EditerProjetComponent implements OnInit {
   projet: Projet|undefined;
-
+  sousTitreList: SousTitre[]|undefined;
+  
   timeTotal!: HTMLElement;
   currentTime!: HTMLElement;
   timeRemaining!: HTMLElement;
@@ -36,9 +38,11 @@ export class EditerProjetComponent implements OnInit {
     if(projetId){
       this.projetService.getProjetById(+projetId)
       .subscribe(projet => this.projet = projet);
-      console.log(this.projet);
-    } else {
+      console.log(this.projetService.getSousTitre(+projetId).subscribe(SousTitreList => this.sousTitreList = this.sousTitreList));
+      this.projetService.getSousTitre(+projetId).subscribe(SousTitreList => this.sousTitreList = this.sousTitreList);
+  } else {
       this.projet = undefined;
+      this.sousTitreList = undefined;
     }
     //Si la vidéo n'existe pas alors on la génère
     if (!this.video) {
