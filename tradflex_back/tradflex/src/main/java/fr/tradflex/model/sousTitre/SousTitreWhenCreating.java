@@ -1,3 +1,3 @@
 package fr.tradflex.model.sousTitre;
 
-public record SousTitreWhenCreating(String body, int timeCodeBegin, int timeCodeEnd, int idProject) {}
+public record SousTitreWhenCreating(String body, double timeCodeBegin, double timeCodeEnd, int idProject) {}

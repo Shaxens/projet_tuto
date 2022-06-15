@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class TimerParser {
 
-    private HourParser        hour;
-    private MinuteParser      minute;
-    private SecondParser      second;
-    private MillisecondParser millisecond;
+    private final HourParser        hour;
+    private final MinuteParser      minute;
+    private final SecondParser      second;
+    private final MillisecondParser millisecond;
 
     @Autowired
     public TimerParser(HourParser hour, MinuteParser minute, SecondParser second, MillisecondParser millisecond) {
