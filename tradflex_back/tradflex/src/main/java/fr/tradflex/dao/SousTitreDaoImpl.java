@@ -28,8 +28,8 @@ public final class SousTitreDaoImpl implements SousTitreDAO {
             {
                 int idSousTitre = res.getInt("id");
                 String body = res.getString("body");
-                int timeCodeBegin = res.getInt("timeCodeBegin");
-                int timeCodeEnd = res.getInt("timeCodeEnd");
+                var timeCodeBegin = res.getDouble("timeCodeBegin");
+                var timeCodeEnd = res.getDouble("timeCodeEnd");
                 int idProject = res.getInt("idProject");
 
                 return new SousTitre(idSousTitre, body, timeCodeBegin, timeCodeEnd, idProject);
@@ -53,8 +53,8 @@ public final class SousTitreDaoImpl implements SousTitreDAO {
             {
                 int id = res.getInt("id");
                 String body = res.getString("body");
-                int timeCodeBegin = res.getInt("timeCodeBegin");
-                int timeCodeEnd = res.getInt("timeCodeEnd");
+                var timeCodeBegin = res.getDouble("timeCodeBegin");
+                var timeCodeEnd = res.getDouble("timeCodeEnd");
                 int idProject = res.getInt("idProject");
 
                 listSousTitre.add(new SousTitre(id, body, timeCodeBegin, timeCodeEnd, idProject));
@@ -74,8 +74,8 @@ public final class SousTitreDaoImpl implements SousTitreDAO {
         {
             PreparedStatement req = connection.connection().prepareStatement("INSERT INTO SOUS_TITRE (body, timeCodeBegin, timeCodeEnd, idProject) VALUES (?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             req.setString(1, sousTitre.body());
-            req.setInt(2, sousTitre.timeCodeBegin());
-            req.setInt(3, sousTitre.timeCodeEnd());
+            req.setDouble(2, sousTitre.timeCodeBegin());
+            req.setDouble(3, sousTitre.timeCodeEnd());
             req.setInt(4, sousTitre.idProject());
 
             req.executeUpdate();
@@ -99,8 +99,8 @@ public final class SousTitreDaoImpl implements SousTitreDAO {
             PreparedStatement req = connection.connection().prepareStatement("UPDATE SOUS_TITRE SET body = ?, timeCodeBegin = ?, timeCodeEnd = ? WHERE SOUS_TITRE.id = ?");
             req.setInt(4, sousTitre.id());
             req.setString(1, sousTitre.body());
-            req.setInt(2, sousTitre.timeCodeBegin());
-            req.setInt(3, sousTitre.timeCodeEnd());
+            req.setDouble(2, sousTitre.timeCodeBegin());
+            req.setDouble(3, sousTitre.timeCodeEnd());
             req.executeUpdate();
 
             return getById(sousTitre.id());

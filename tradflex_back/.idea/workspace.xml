@@ -7,12 +7,13 @@
     <list default="true" id="d0c9b139-ab19-402e-923c-d9a80e76d7e9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/ProjectDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/dao/SousTitreDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/sousTitre/SousTitre.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/sousTitre/SousTitre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/sousTitre/SousTitreWhenCreating.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/model/sousTitre/SousTitreWhenCreating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/process/parser/SousTitreParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/process/parser/SousTitreParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/process/parser/timer/TimerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/process/parser/timer/TimerParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/ressource/ProjectRessource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradflex/src/test/java/fr/tradflex/process/parser/timer/TestTimerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/src/test/java/fr/tradflex/process/parser/timer/TestTimerParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tradflex/tradflex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tradflex/tradflex.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +74,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "copyright.filetypes.JAVA",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "spring.configuration.checksum": "d3e19482922bd970fa5fe62cd2310e12",
     "vue.rearranger.settings.migration": "true"
   }
@@ -92,100 +93,110 @@
       <recent name="fr.tradflex.projet" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="fr.tradflex.process.parser" />
       <recent name="fr.tradflex.process.parser.timer" />
       <recent name="fr.tradflex.ressource" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fr.tradflex.process.parser" />
       <recent name="fr.tradflex.process.parser.timer" />
       <recent name="fr.tradflex.ressource" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestTimerParser.when_time_code_is_0_then_return_0_as_srt">
-    <configuration name="TestHourParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestSousTitresParser">
+    <configuration name="TestSousTitreParser.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tradflex" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.tradflex.process.parser.timer.*" />
+          <option name="PATTERN" value="fr.tradflex.process.parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fr.tradflex.process.parser.timer" />
-      <option name="MAIN_CLASS_NAME" value="fr.tradflex.process.parser.timer.TestHourParser" />
+      <option name="PACKAGE_NAME" value="fr.tradflex.process.parser" />
+      <option name="MAIN_CLASS_NAME" value="fr.tradflex.process.parser.TestSousTitreParser" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSousTitresParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tradflex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.tradflex.process.parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.tradflex.process.parser" />
+      <option name="MAIN_CLASS_NAME" value="fr.tradflex.process.parser.TestSousTitresParser" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestHourParser.when_time_code_is_0_then_return_0_as_srt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSousTitresParser.test_when_list_size_is_three_but_some_inside_other" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tradflex" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.tradflex.process.parser.timer.*" />
+          <option name="PATTERN" value="fr.tradflex.process.parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fr.tradflex.process.parser.timer" />
-      <option name="MAIN_CLASS_NAME" value="fr.tradflex.process.parser.timer.TestHourParser" />
-      <option name="METHOD_NAME" value="when_time_code_is_0_then_return_0_as_srt(double,java.lang.String)" />
+      <option name="PACKAGE_NAME" value="fr.tradflex.process.parser" />
+      <option name="MAIN_CLASS_NAME" value="fr.tradflex.process.parser.TestSousTitresParser" />
+      <option name="METHOD_NAME" value="test_when_list_size_is_three_but_some_inside_other" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMillisecondParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSousTitresParser.test_when_list_size_is_three_ordered" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tradflex" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.tradflex.process.parser.timer.*" />
+          <option name="PATTERN" value="fr.tradflex.process.parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fr.tradflex.process.parser.timer" />
-      <option name="MAIN_CLASS_NAME" value="fr.tradflex.process.parser.timer.TestMillisecondParser" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestMinuteParser.when_time_code_is_0_then_return_0_as_srt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tradflex" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.tradflex.process.parser.timer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fr.tradflex.process.parser.timer" />
-      <option name="MAIN_CLASS_NAME" value="fr.tradflex.process.parser.timer.TestMinuteParser" />
-      <option name="METHOD_NAME" value="when_time_code_is_0_then_return_0_as_srt(double,java.lang.String)" />
+      <option name="PACKAGE_NAME" value="fr.tradflex.process.parser" />
+      <option name="MAIN_CLASS_NAME" value="fr.tradflex.process.parser.TestSousTitresParser" />
+      <option name="METHOD_NAME" value="test_when_list_size_is_three_ordered" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestTimerParser.when_time_code_is_0_then_return_0_as_srt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSousTitresParser.test_whith_empty_list" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tradflex" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.tradflex.process.parser.timer.*" />
+          <option name="PATTERN" value="fr.tradflex.process.parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fr.tradflex.process.parser.timer" />
-      <option name="MAIN_CLASS_NAME" value="fr.tradflex.process.parser.timer.TestTimerParser" />
-      <option name="METHOD_NAME" value="when_time_code_is_0_then_return_0_as_srt(double,java.lang.String)" />
+      <option name="PACKAGE_NAME" value="fr.tradflex.process.parser" />
+      <option name="MAIN_CLASS_NAME" value="fr.tradflex.process.parser.TestSousTitresParser" />
+      <option name="METHOD_NAME" value="test_whith_empty_list" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tradflex" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.tradflex.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestTimerParser.when_time_code_is_0_then_return_0_as_srt" />
-        <item itemvalue="JUnit.TestMillisecondParser" />
-        <item itemvalue="JUnit.TestHourParser" />
-        <item itemvalue="JUnit.TestHourParser.when_time_code_is_0_then_return_0_as_srt" />
-        <item itemvalue="JUnit.TestMinuteParser.when_time_code_is_0_then_return_0_as_srt" />
+        <item itemvalue="JUnit.TestSousTitresParser" />
+        <item itemvalue="JUnit.TestSousTitresParser.test_when_list_size_is_three_but_some_inside_other" />
+        <item itemvalue="JUnit.TestSousTitresParser.test_when_list_size_is_three_ordered" />
+        <item itemvalue="JUnit.TestSousTitresParser.test_whith_empty_list" />
+        <item itemvalue="JUnit.TestSousTitreParser.test" />
       </list>
     </recent_temporary>
   </component>
@@ -220,6 +231,7 @@
       <workItem from="1654846082284" duration="785000" />
       <workItem from="1654849283449" duration="48000" />
       <workItem from="1655216528548" duration="6892000" />
+      <workItem from="1655294338606" duration="5584000" />
     </task>
     <servers />
   </component>
@@ -236,6 +248,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tradflex/src/main/java/fr/tradflex/process/parser/SousTitresParser.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

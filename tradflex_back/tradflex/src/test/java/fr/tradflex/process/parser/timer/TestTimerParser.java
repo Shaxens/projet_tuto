@@ -1,13 +1,16 @@
 package fr.tradflex.process.parser.timer;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+@SpringBootTest
 class TestTimerParser {
+
+    @Autowired
+    private TimerParser timerParser;
 
     @ParameterizedTest
     @CsvSource(delimiterString = " -> ", textBlock = """
@@ -18,6 +21,6 @@ class TestTimerParser {
              3600 -> 01:00:00,000
              """)
     void when_time_code_is_0_then_return_0_as_srt(double timeCode, String resultat) {
-        Assertions.assertThat(new TimerParser(new HourParser(), new MinuteParser(), new SecondParser(), new MillisecondParser()).parse(timeCode)).isEqualTo(resultat);
+        Assertions.assertThat(timerParser.parse(timeCode)).isEqualTo(resultat);
     }
 }
