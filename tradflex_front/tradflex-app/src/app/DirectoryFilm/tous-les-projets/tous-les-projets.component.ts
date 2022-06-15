@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Projet } from '../../projet';
+import {Projet, ProjetId} from '../../projet';
 import { ProjetService } from '../projet.service';
 @Component({
   selector: 'app-tous-les-projets',
@@ -8,14 +8,15 @@ import { ProjetService } from '../projet.service';
 })
 //cette class permet de recuperer les films
 export class TousLesProjetsComponent implements OnInit {
-projetList : Projet[] | undefined;
+projetList : ProjetId[] | undefined;
   constructor(private projetService : ProjetService) {
   }
 
   ngOnInit(): void {
     this.projetService.getProjetList()
-      .subscribe(projetList => this.projetList= projetList);//je m'abonne au flux de donnée de l'observable pour recevoir une liste de film
+      .subscribe(projetList => this.projetList = projetList);//je m'abonne au flux de donnée de l'observable pour recevoir une liste de film
     //quand je reçois la liste de film je la pousse dans filmList
+    console.log(this.projetList)
   }
 deleteProjet(projet :Projet){
 
