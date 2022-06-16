@@ -14,8 +14,8 @@ import { SousTitre } from '../sousTitre';
 
 export class EditerProjetComponent implements OnInit {
   projet: Projet|undefined;
-  sousTitreList: SousTitre[]|undefined;
-  
+  sousTitreList: SousTitre[]= [];
+
   timeTotal!: HTMLElement;
   currentTime!: HTMLElement;
   timeRemaining!: HTMLElement;
@@ -38,11 +38,21 @@ export class EditerProjetComponent implements OnInit {
     if(projetId){
       this.projetService.getProjetById(+projetId)
       .subscribe(projet => this.projet = projet);
-      console.log(this.projetService.getSousTitre(+projetId).subscribe(SousTitreList => this.sousTitreList = this.sousTitreList));
-      this.projetService.getSousTitre(+projetId).subscribe(SousTitreList => this.sousTitreList = this.sousTitreList);
+
+      // this.sousTitreList = this.projetService.getSousTitre(+projetId);
+      fetch(`http://localhost:8080/project/${projetId}/sousTitre`).then(res => res.json())
+      .then(jsonData => {
+          console.log(jsonData);
+          return this.sousTitreList = jsonData;
+      });
+      // list.forEach(element => {
+        
+      // });
+      // console.log(this.projetService.getSousTitre(+projetId).subscribe(SousTitreList => this.sousTitreList = this.sousTitreList));
+      // this.projetService.getSousTitre(+projetId).subscribe(sousTitreList => this.sousTitreList = this.sousTitreList);
+      // this.sousTitreList = this.projetService.getSousTitre(+projetId);
   } else {
       this.projet = undefined;
-      this.sousTitreList = undefined;
     }
     //Si la vidéo n'existe pas alors on la génère
     if (!this.video) {

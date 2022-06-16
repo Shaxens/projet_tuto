@@ -7,6 +7,8 @@ import { SousTitre } from '../sousTitre';
   providedIn: 'root'
 })
 export class ProjetService {
+  sousTitreList: SousTitre|undefined;
+
   constructor(private http: HttpClient) {
   }
 //methode http
@@ -78,14 +80,15 @@ export class ProjetService {
     return of(errorValue);
   }
 
-  getSousTitre(projetId: number): Observable<undefined> {
-    return this.http.get<SousTitre>(`http://localhost:8080/project/${projetId}/sousTitre`, {
-      headers:  {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json'
-      }
-    }).pipe(tap((response) => this.log(response)),
-    catchError((error) => this.handleError(error,undefined)));
+  getSousTitre(projetId: number): any {
+    // return this.http.get<SousTitre>(`http://localhost:8080/project/${projetId}/sousTitre`, {
+    //   headers:  {
+    //     'Access-Control-Allow-Origin': '*',
+    //     'Content-Type': 'application/json'
+    //   }
+    // }).pipe(tap((response) => this.log(response)),
+    // catchError((error) => this.handleError(error,undefined)));
+
   }
 
   getSousTitreById(id: number ,projetId: number): Observable<undefined> {
