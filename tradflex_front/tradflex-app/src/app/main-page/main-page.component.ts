@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {Projet, ProjetId} from "../projet";
+import {Projet} from "../projet";
 import {PROJET} from "../projetList";
 import { ProjetService } from '../DirectoryFilm/projet.service';
 
@@ -31,8 +31,14 @@ export class MainPageComponent implements OnInit {
           })); //je m'abonne au flux de donnée de l'observable pour recevoir une liste de film
         //quand je reçois la liste de film je la pousse dans filmList
         this.projetList?.forEach(projet => this.projetService.getProjetById(projet.id))
-      }
+      }*/
+       fetch(`http://localhost:8080/project`).then(res => res.json())
+      .then(jsonData => {
+        console.log(jsonData);
+        return this.projetList = jsonData;
+      });
 
+}
       creerProjet() {
         this.router.navigate(['creerProjet']);
       }
@@ -48,11 +54,6 @@ export class MainPageComponent implements OnInit {
       SupprimerProjet(projet :Projet){
         this.projetService.deleteProjetById(projet.id).subscribe( );
       }
-    */
-    fetch(`http://localhost:8080/project/`).then(res => res.json())
-      .then(jsonData => {
-        console.log(jsonData);
-        return this.projetList = jsonData;
-      });
-  }
+
+
 }
