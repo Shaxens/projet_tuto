@@ -39,10 +39,8 @@ public class ProjectRessource {
     }
 
     @GetMapping(path = "/project")
-    public List<ProjectAsId> getProjects() {
-        return projectDAO.getAll().stream()
-                .map(ProjectAsId::new)
-                .toList();
+    public Collection<Project> getProjects() {
+        return projectDAO.getAll();
     }
 
     @GetMapping(path = "/project/{id}/sousTitre")
